@@ -7,6 +7,7 @@ export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState('personal');
   const [toast, setToast] = useState('');
   const [editingItem, setEditingItem] = useState(null);
+  const [confirmModal, setConfirmModal] = useState(null); // { sectionKey, itemId }
 
   useEffect(() => {
     setData(DataManager.getData());
@@ -41,11 +42,28 @@ export default function AdminPanel() {
     saveAll(newData);
   };
 
-  const deleteItem = (sectionKey, itemId) => {
-    if (!confirm('Are you sure you want to delete this item?')) return;
-    DataManager.deleteItem(sectionKey, itemId);
-    setData(DataManager.getData());
-    showToast('🗑️ Item deleted!');
+  const requestDelete = (sectionKey, itemId) => {
+    setConfirmModal({ sectionKey, itemId });
+  };
+
+  const confirmDelete = () => {
+    if (!confirmModal) return;
+    const { sectionKey, itemId } = confirmModal;
+    // Operate directly on current data state to avoid deepMerge issues
+    const newData = JSON.parse(JSON.stringify(data));
+    const keys = sectionKey.split('.');
+    let target = newData;
+    for (const k of keys) target = target[k];
+    if (Array.isArray(target)) {
+      const idx = target.findIndex(x => x.id === itemId);
+      if (idx !== -1) {
+        target.splice(idx, 1);
+        DataManager.saveData(newData);
+        setData(newData);
+        showToast('🗑️ Item deleted!');
+      }
+    }
+    setConfirmModal(null);
   };
 
   const addItem = (sectionKey, template) => {
@@ -119,7 +137,7 @@ export default function AdminPanel() {
         <div key={item.id || idx} className="admin-item-card">
           <div className="admin-item-header">
             <span className="admin-item-number">#{idx + 1}</span>
-            <button className="admin-delete-btn" onClick={() => deleteItem(sectionKey, item.id)}>🗑️ Delete</button>
+            <button className="admin-delete-btn" onClick={() => requestDelete(sectionKey, item.id)}>🗑️ Delete</button>
           </div>
           {fields.map(f => (
             <div key={f.key} className="admin-field">
@@ -176,6 +194,18 @@ export default function AdminPanel() {
           .admin-tab { white-space: nowrap; padding: 8px 16px; }
           .admin-grid { grid-template-columns: 1fr; }
         }
+        .confirm-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 10000; display: flex; align-items: center; justify-content: center; animation: fadeIn 0.2s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .confirm-modal { background: #151f33; border: 1px solid #2a3555; border-radius: 16px; padding: 32px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.5); animation: scaleIn 0.2s ease; }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        .confirm-icon { font-size: 40px; margin-bottom: 12px; }
+        .confirm-modal h4 { font-size: 20px; color: #e8eaf0; margin-bottom: 8px; }
+        .confirm-modal p { font-size: 14px; color: #6b7394; margin-bottom: 24px; line-height: 1.5; }
+        .confirm-actions { display: flex; gap: 12px; justify-content: center; }
+        .confirm-cancel { padding: 10px 24px; border-radius: 8px; border: 1px solid #2a3555; background: #111827; color: #a0a8c0; cursor: pointer; font-size: 14px; font-family: inherit; transition: all 0.2s; }
+        .confirm-cancel:hover { border-color: #e8b84d; color: #e8b84d; }
+        .confirm-delete { padding: 10px 24px; border-radius: 8px; border: none; background: #dc2626; color: #fff; cursor: pointer; font-size: 14px; font-weight: 600; font-family: inherit; transition: all 0.2s; }
+        .confirm-delete:hover { background: #ef4444; }
       `}</style>
 
       <div className="admin-sidebar">
@@ -397,6 +427,21 @@ export default function AdminPanel() {
       </div>
 
       {toast && <div className="toast">{toast}</div>}
+
+      {/* Custom Confirm Modal */}
+      {confirmModal && (
+        <div className="confirm-overlay" onClick={() => setConfirmModal(null)}>
+          <div className="confirm-modal" onClick={e => e.stopPropagation()}>
+            <div className="confirm-icon">🗑️</div>
+            <h4>Delete Item?</h4>
+            <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+            <div className="confirm-actions">
+              <button className="confirm-cancel" onClick={() => setConfirmModal(null)}>Cancel</button>
+              <button className="confirm-delete" onClick={confirmDelete}>Delete</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
