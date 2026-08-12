@@ -125,8 +125,9 @@ export default function AdminPanel() {
     { key: 'copyrights', label: '©️ Copyrights', icon: '©️' },
     { key: 'awards', label: '🏆 Awards', icon: '🏆' },
     { key: 'certifications', label: '🎖️ Certifications', icon: '🎖️' },
-    { key: 'gallery', label: '🖼️ Gallery', icon: '🖼️' },
+    { key: 'associations', label: '🤝 Associations', icon: '🤝' },
     { key: 'talks', label: '🎤 Invited Talks', icon: '🎤' },
+    { key: 'gallery', label: '🖼️ Gallery', icon: '🖼️' },
     { key: 'tools', label: '⚙️ Tools', icon: '⚙️' },
   ];
 
@@ -306,7 +307,7 @@ export default function AdminPanel() {
         {activeTab === 'publications' && (
           <>
             <h3>📄 Publications</h3>
-            <p>Manage your journal and conference publications.</p>
+            <p>Manage your journal, conference publications, SCI, and books.</p>
             <h4 style={{ color: '#e8b84d', marginBottom: '16px' }}>Journals ({data.publications.journals.length})</h4>
             {renderArrayEditor('publications.journals', data.publications.journals, [
               { key: 'title', label: 'Title', type: 'text' },
@@ -315,13 +316,35 @@ export default function AdminPanel() {
               { key: 'year', label: 'Year', type: 'text' },
               { key: 'indexed', label: 'Indexed In', type: 'text' },
             ], { title: '', authors: '', journal: '', year: '', indexed: '' })}
+            
             <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Conferences ({data.publications.conferences.length})</h4>
             {renderArrayEditor('publications.conferences', data.publications.conferences, [
               { key: 'title', label: 'Title', type: 'text' },
               { key: 'authors', label: 'Authors', type: 'text' },
               { key: 'conference', label: 'Conference/Venue', type: 'text' },
+              { key: 'year', label: 'Year', type: 'text' },
               { key: 'indexed', label: 'Indexed In', type: 'text' },
-            ], { title: '', authors: '', conference: '', indexed: '' })}
+              { key: 'link', label: 'Link', type: 'text' },
+            ], { title: '', authors: '', conference: '', year: '', indexed: '', link: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>SCI Publications ({data.publications.sci.length})</h4>
+            {renderArrayEditor('publications.sci', data.publications.sci, [
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'authors', label: 'Authors', type: 'text' },
+              { key: 'journal', label: 'Journal', type: 'text' },
+              { key: 'year', label: 'Year', type: 'text' },
+              { key: 'indexed', label: 'Indexed In', type: 'text' },
+              { key: 'link', label: 'Link', type: 'text' },
+            ], { title: '', authors: '', journal: '', year: '', indexed: '', link: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Books Authored ({data.books.length})</h4>
+            {renderArrayEditor('books', data.books, [
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'authors', label: 'Authors', type: 'text' },
+              { key: 'publisher', label: 'Publisher', type: 'text' },
+              { key: 'year', label: 'Year', type: 'text' },
+              { key: 'link', label: 'Link', type: 'text' },
+            ], { title: '', authors: '', publisher: '', year: '', link: '' })}
           </>
         )}
 
@@ -355,12 +378,39 @@ export default function AdminPanel() {
         {activeTab === 'awards' && (
           <>
             <h3>🏆 Awards & Recognition</h3>
+            <h4 style={{ color: '#e8b84d', margin: '16px 0 16px' }}>Awards ({data.awards.length})</h4>
             {renderArrayEditor('awards', data.awards, [
               { key: 'title', label: 'Award Title', type: 'text' },
               { key: 'organization', label: 'Organization', type: 'text' },
               { key: 'year', label: 'Year', type: 'text' },
               { key: 'description', label: 'Description', type: 'textarea' },
             ], { title: '', organization: '', year: '', description: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Funded Projects ({(data.fundedProjects || []).length})</h4>
+            {renderArrayEditor('fundedProjects', data.fundedProjects || [], [
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'funder', label: 'Funder / Agency', type: 'text' },
+              { key: 'role', label: 'Role', type: 'text' },
+              { key: 'value', label: 'Value/Amount', type: 'text' },
+              { key: 'description', label: 'Description', type: 'textarea' },
+            ], { title: '', funder: '', role: '', value: '', description: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Editorial Roles ({(data.professionalActivities.editorial || []).length})</h4>
+            {renderArrayEditor('professionalActivities.editorial', data.professionalActivities.editorial || [], [
+              { key: 'role', label: 'Role', type: 'text' },
+              { key: 'journal', label: 'Journal', type: 'text' },
+            ], { role: '', journal: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Reviewer ({(data.professionalActivities.reviewer || []).length})</h4>
+            {renderArrayEditor('professionalActivities.reviewer', data.professionalActivities.reviewer || [], [
+              { key: 'journal', label: 'Journal', type: 'text' },
+            ], { journal: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>UG Projects Guided ({(data.ugProjectsGuided || []).length})</h4>
+            {renderArrayEditor('ugProjectsGuided', data.ugProjectsGuided || [], [
+              { key: 'title', label: 'Project Title', type: 'text' },
+              { key: 'year', label: 'Year', type: 'text' },
+            ], { title: '', year: '' })}
           </>
         )}
 
@@ -389,16 +439,62 @@ export default function AdminPanel() {
           </>
         )}
 
+        {/* ASSOCIATIONS */}
+        {activeTab === 'associations' && (
+          <>
+            <h3>🤝 Associations & Memberships</h3>
+            <h4 style={{ color: '#e8b84d', margin: '16px 0 16px' }}>Journal Associations ({(data.professionalActivities.journalAssociations || []).length})</h4>
+            {renderArrayEditor('professionalActivities.journalAssociations', data.professionalActivities.journalAssociations || [], [
+              { key: 'journal', label: 'Journal Name', type: 'text' },
+            ], { journal: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Conference Associations ({(data.professionalActivities.conferenceAssociations || []).length})</h4>
+            {renderArrayEditor('professionalActivities.conferenceAssociations', data.professionalActivities.conferenceAssociations || [], [
+              { key: 'organization', label: 'Organization / Conference', type: 'text' },
+              { key: 'role', label: 'Role', type: 'text' },
+            ], { organization: '', role: 'Author / Contributor' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Memberships ({(data.professionalActivities.memberships || []).length})</h4>
+            {renderArrayEditor('professionalActivities.memberships', data.professionalActivities.memberships || [], [
+              { key: 'organization', label: 'Organization Name', type: 'text' },
+              { key: 'membershipId', label: 'Membership ID / Role', type: 'text' },
+            ], { organization: '', membershipId: '' })}
+          </>
+        )}
+
         {/* INVITED TALKS */}
         {activeTab === 'talks' && (
           <>
-            <h3>🎤 Invited Talks</h3>
-            {renderArrayEditor('invitedTalks', data.invitedTalks, [
+            <h3>🎤 Invited Talks & Lectures</h3>
+            
+            <h4 style={{ color: '#e8b84d', margin: '16px 0 16px' }}>FDPs ({(data.invitedTalks.fdps || []).length})</h4>
+            {renderArrayEditor('invitedTalks.fdps', data.invitedTalks.fdps || [], [
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'venue', label: 'Venue', type: 'text' },
+              { key: 'type', label: 'Type', type: 'text' },
+            ], { title: '', venue: '', type: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Webinars ({(data.invitedTalks.webinars || []).length})</h4>
+            {renderArrayEditor('invitedTalks.webinars', data.invitedTalks.webinars || [], [
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'venue', label: 'Venue', type: 'text' },
+              { key: 'year', label: 'Year', type: 'text' },
+            ], { title: '', venue: '', year: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Technical Lectures ({(data.invitedTalks.technicalLectures || []).length})</h4>
+            {renderArrayEditor('invitedTalks.technicalLectures', data.invitedTalks.technicalLectures || [], [
               { key: 'title', label: 'Title', type: 'text' },
               { key: 'venue', label: 'Venue', type: 'text' },
               { key: 'type', label: 'Type', type: 'text' },
               { key: 'year', label: 'Year', type: 'text' },
             ], { title: '', venue: '', type: '', year: '' })}
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>Conference Invited Talks ({(data.invitedTalks.conferenceInvitedTalks || []).length})</h4>
+            {renderArrayEditor('invitedTalks.conferenceInvitedTalks', data.invitedTalks.conferenceInvitedTalks || [], [
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'venue', label: 'Venue / Conference', type: 'text' },
+              { key: 'year', label: 'Year', type: 'text' },
+            ], { title: '', venue: '', year: '' })}
           </>
         )}
 
@@ -414,13 +510,14 @@ export default function AdminPanel() {
             </div>
             <div className="admin-item-card">
               <h4 style={{ color: '#e8b84d', marginBottom: '12px' }}>📋 Quick Stats</h4>
-              <p>Publications: {data.publications.journals.length + data.publications.conferences.length}</p>
-              <p>Patents: {data.patents.length}</p>
-              <p>Copyrights: {data.copyrights.length}</p>
-              <p>Awards: {data.awards.length}</p>
-              <p>Certifications: {data.certifications.length}</p>
-              <p>Gallery Images: {data.gallery.length}</p>
-              <p>Invited Talks: {data.invitedTalks.length}</p>
+              <p>Publications: {(data.publications?.journals?.length || 0) + (data.publications?.conferences?.length || 0) + (data.publications?.sci?.length || 0)}</p>
+              <p>Books: {data.books?.length || 0}</p>
+              <p>Patents: {data.patents?.length || 0}</p>
+              <p>Copyrights: {data.copyrights?.length || 0}</p>
+              <p>Awards & Recognitions: {data.awards?.length || 0}</p>
+              <p>Certifications: {data.certifications?.length || 0}</p>
+              <p>Gallery Images: {data.gallery?.length || 0}</p>
+              <p>Invited Talks: {(data.invitedTalks?.fdps?.length || 0) + (data.invitedTalks?.webinars?.length || 0) + (data.invitedTalks?.technicalLectures?.length || 0) + (data.invitedTalks?.conferenceInvitedTalks?.length || 0)}</p>
             </div>
           </>
         )}

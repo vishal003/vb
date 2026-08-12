@@ -1,9 +1,49 @@
 'use client';
+import { useState } from 'react';
 import { useData } from './DataProvider';
 import { Icons } from './Icons';
 
 export default function Contact() {
   const d = useData();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setError('');
+
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('Name'),
+      email: formData.get('Email'),
+      phone: formData.get('Phone'),
+      subject: formData.get('Subject'),
+      message: formData.get('Message'),
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+
+      if (res.ok) {
+        setSuccess(true);
+        e.target.reset();
+      } else {
+        setError(result.error || 'Failed to send message.');
+      }
+    } catch (err) {
+      setError('An unexpected error occurred.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -71,6 +111,30 @@ export default function Contact() {
               <span style={{ fontWeight: '600', fontSize: '14px' }}>Website</span>
             </a>
           </div>
+        </div>
+
+        {/* Contact Form */}
+        <div style={{ marginTop: '50px', background: 'var(--bg-section-alt)', padding: '40px', borderRadius: '10px' }}>
+          <div className="section-title-wrapper" style={{ marginBottom: '30px' }}>
+            <h3 className="section-title" style={{ fontSize: '24px' }}>Send a Message</h3>
+          </div>
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '800px', margin: '0 auto' }}>
+            {success && <div style={{ background: '#d4edda', color: '#155724', padding: '15px', borderRadius: '4px', textAlign: 'center' }}>Your message was sent successfully!</div>}
+            {error && <div style={{ background: '#f8d7da', color: '#721c24', padding: '15px', borderRadius: '4px', textAlign: 'center' }}>{error}</div>}
+            
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+              <input type="text" name="Name" placeholder="Your Name*" required disabled={loading} style={{ width: '100%', padding: '15px', border: '1px solid var(--border)', borderRadius: '4px', background: 'white' }} />
+              <input type="email" name="Email" placeholder="Email Address*" required disabled={loading} style={{ width: '100%', padding: '15px', border: '1px solid var(--border)', borderRadius: '4px', background: 'white' }} />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+              <input type="text" name="Phone" placeholder="Your Phone Number" disabled={loading} style={{ width: '100%', padding: '15px', border: '1px solid var(--border)', borderRadius: '4px', background: 'white' }} />
+              <input type="text" name="Subject" placeholder="Your Subject" disabled={loading} style={{ width: '100%', padding: '15px', border: '1px solid var(--border)', borderRadius: '4px', background: 'white' }} />
+            </div>
+            <textarea name="Message" placeholder="Write Message*" required rows="6" disabled={loading} style={{ width: '100%', padding: '15px', border: '1px solid var(--border)', borderRadius: '4px', background: 'white', resize: 'vertical' }}></textarea>
+            <button type="submit" disabled={loading} style={{ background: loading ? '#666' : '#333333', color: 'white', padding: '15px 30px', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: loading ? 'not-allowed' : 'pointer', marginTop: '10px', width: '100%', transition: 'background 0.3s' }}>
+              {loading ? 'SENDING...' : 'SUBMIT NOW'}
+            </button>
+          </form>
         </div>
       </section>
 
