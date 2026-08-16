@@ -283,19 +283,19 @@ export default function AdminPanel() {
       `}</style>
 
       <div className="admin-sidebar">
-        <h2>Admin Panel</h2>
-        <p>Dr. Vishal S. Badgujar</p>
+        <div style={{ padding: '0 24px', marginBottom: '16px' }}>
+          <h2 style={{ padding: '0', marginBottom: '8px' }}>Admin Panel</h2>
+          <p style={{ padding: '0', marginBottom: '16px' }}>Dr. Vishal S. Badgujar</p>
+          <button onClick={commitToGithub} style={{ width: '100%', background: '#e8b84d', color: '#0a0f1e', border: 'none', padding: '12px', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 4px 14px rgba(232,184,77,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+            <span>🚀</span> Commit to GitHub
+          </button>
+          <p style={{ fontSize: '11px', color: '#6b7394', marginTop: '8px', textAlign: 'center', padding: '0' }}>Click to publish local changes</p>
+        </div>
         {TABS.map(tab => (
           <button key={tab.key} className={`admin-tab ${activeTab === tab.key ? 'active' : ''}`} onClick={() => setActiveTab(tab.key)}>
             {tab.label}
           </button>
         ))}
-        <div style={{ padding: '24px', marginTop: 'auto' }}>
-          <button onClick={commitToGithub} style={{ width: '100%', background: '#e8b84d', color: '#0a0f1e', border: 'none', padding: '12px', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 4px 14px rgba(232,184,77,0.3)' }}>
-            🚀 Commit to GitHub
-          </button>
-          <p style={{ fontSize: '11px', color: '#6b7394', marginTop: '8px', textAlign: 'center' }}>Click to publish local changes</p>
-        </div>
       </div>
 
       <div className="admin-main">
