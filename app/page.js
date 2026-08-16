@@ -23,7 +23,7 @@ const SECTIONS = [
   { id: 'education', label: 'Qualification', icon: Icons.education },
   { id: 'experience', label: 'Experience', icon: Icons.experience },
   { id: 'skills', label: 'Key Skills', icon: Icons.skills },
-  { id: 'certifications', label: 'Certifications', icon: Icons.certificate },
+  { id: 'certifications', label: 'Certifications & Badges', icon: Icons.certificate },
   { id: 'achievements', label: 'Achievements', icon: Icons.trophy },
   { id: 'publications', label: 'Research', icon: Icons.publication },
   { id: 'patents', label: 'Intellectual Property', icon: Icons.patent },

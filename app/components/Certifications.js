@@ -93,7 +93,7 @@ export default function Certifications() {
     <section className="section section-white">
       <div className="section-title-wrapper">
         <span className="section-bg-text">CERTIFICATIONS</span>
-        <h2 className="section-title">Certifications</h2>
+        <h2 className="section-title" style={{ fontSize: '32px' }}>Certifications and Badges Earned</h2>
       </div>
 
       <div style={{ display: 'flex', gap: '20px', marginBottom: '30px', borderBottom: '2px solid var(--border)', paddingBottom: '10px', overflowX: 'auto', whiteSpace: 'nowrap' }}>

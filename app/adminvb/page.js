@@ -8,8 +8,14 @@ export default function AdminPanel() {
   const [toast, setToast] = useState('');
   const [editingItem, setEditingItem] = useState(null);
   const [confirmModal, setConfirmModal] = useState(null); // { sectionKey, itemId }
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
+  const [loginLoading, setLoginLoading] = useState(false);
 
   useEffect(() => {
+    if (sessionStorage.getItem('admin_auth') === 'true') {
+      setIsAuthenticated(true);
+    }
     setData(DataManager.getData());
   }, []);
 
@@ -19,14 +25,43 @@ export default function AdminPanel() {
   };
 
   const saveAll = async (newData) => {
-    showToast('⏳ Saving to GitHub & Triggering Rebuild...');
     const result = await DataManager.saveData(newData);
     if (result.success) {
       setData({ ...newData });
+      // Removed toast to make typing feel instantaneous
+    } else {
+      showToast(`❌ Failed to save locally: ${result.error}`);
+    }
+  };
+
+  const commitToGithub = async () => {
+    showToast('⏳ Committing to GitHub & Triggering Rebuild...');
+    const result = await DataManager.commitToGithub();
+    if (result.success) {
       showToast('✅ Saved successfully & Rebuild triggered!');
     } else {
-      showToast(`❌ Failed to save: ${result.error}`);
+      showToast(`❌ Failed to commit: ${result.error}`);
     }
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoginLoading(true);
+    try {
+      const res = await fetch('/api/verify-password', {
+        method: 'POST', body: JSON.stringify({ password: passwordInput })
+      });
+      const { success } = await res.json();
+      if (success) {
+        setIsAuthenticated(true);
+        sessionStorage.setItem('admin_auth', 'true');
+      } else {
+        alert('Incorrect Password!');
+      }
+    } catch(err) {
+      alert('Error verifying password.');
+    }
+    setLoginLoading(false);
   };
 
   const handlePersonalChange = (field, value) => {
@@ -63,11 +98,10 @@ export default function AdminPanel() {
       const idx = target.findIndex(x => x.id === itemId);
       if (idx !== -1) {
         target.splice(idx, 1);
-        showToast('⏳ Deleting & Triggering Rebuild...');
         const result = await DataManager.saveData(newData);
         if (result.success) {
           setData(newData);
-          showToast('🗑️ Item deleted & Rebuild triggered!');
+          showToast('🗑️ Item deleted locally. Click Commit to apply to live site.');
         } else {
           showToast(`❌ Failed to delete: ${result.error}`);
         }
@@ -77,11 +111,10 @@ export default function AdminPanel() {
   };
 
   const addItem = async (sectionKey, template) => {
-    showToast('⏳ Adding & Triggering Rebuild...');
     const result = await DataManager.addItem(sectionKey, { ...template });
     if (result.success) {
       setData(DataManager.getData());
-      showToast('✅ Item added & Rebuild triggered!');
+      showToast('✅ Item added locally. Click Commit to apply to live site.');
     } else {
       showToast(`❌ Failed to add item: ${result.error}`);
     }
@@ -122,15 +155,35 @@ export default function AdminPanel() {
 
   const resetData = async () => {
     if (!confirm('Reset all data to defaults? This cannot be undone!')) return;
-    showToast('⏳ Resetting & Triggering Rebuild...');
     const result = await DataManager.resetToDefaults();
     if (result.success) {
       setData(DataManager.getData());
-      showToast('🔄 Reset to defaults & Rebuild triggered!');
+      showToast('🔄 Reset to defaults. Click Commit to apply to live site.');
     } else {
       showToast(`❌ Failed to reset: ${result.error}`);
     }
   };
+
+  if (!isAuthenticated) {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', background: '#0a0f1e', color: '#e8eaf0' }}>
+        <form onSubmit={handleLogin} style={{ background: '#111827', padding: '40px', borderRadius: '12px', border: '1px solid #1f2940', width: '350px', textAlign: 'center' }}>
+          <h2 style={{ color: '#e8b84d', marginBottom: '20px' }}>Admin Login</h2>
+          <input 
+            type="password" 
+            placeholder="Enter Password" 
+            value={passwordInput} 
+            onChange={e => setPasswordInput(e.target.value)} 
+            style={{ width: '100%', padding: '12px', border: '1px solid #2a3555', borderRadius: '8px', background: '#0a0f1e', color: '#fff', marginBottom: '20px' }}
+            required
+          />
+          <button type="submit" disabled={loginLoading} style={{ width: '100%', padding: '12px', background: '#e8b84d', color: '#0a0f1e', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: loginLoading ? 'not-allowed' : 'pointer' }}>
+            {loginLoading ? 'Verifying...' : 'Login'}
+          </button>
+        </form>
+      </div>
+    );
+  }
 
   if (!data) return <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', background: '#0a0f1e', color: '#e8eaf0' }}>Loading...</div>;
 
@@ -237,6 +290,12 @@ export default function AdminPanel() {
             {tab.label}
           </button>
         ))}
+        <div style={{ padding: '24px', marginTop: 'auto' }}>
+          <button onClick={commitToGithub} style={{ width: '100%', background: '#e8b84d', color: '#0a0f1e', border: 'none', padding: '12px', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 4px 14px rgba(232,184,77,0.3)' }}>
+            🚀 Commit to GitHub
+          </button>
+          <p style={{ fontSize: '11px', color: '#6b7394', marginTop: '8px', textAlign: 'center' }}>Click to publish local changes</p>
+        </div>
       </div>
 
       <div className="admin-main">
