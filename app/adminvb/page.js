@@ -20,12 +20,12 @@ export default function AdminPanel() {
 
   const saveAll = async (newData) => {
     showToast('⏳ Saving to GitHub & Triggering Rebuild...');
-    const success = await DataManager.saveData(newData);
-    if (success) {
+    const result = await DataManager.saveData(newData);
+    if (result.success) {
       setData({ ...newData });
       showToast('✅ Saved successfully & Rebuild triggered!');
     } else {
-      showToast('❌ Failed to save to GitHub.');
+      showToast(`❌ Failed to save: ${result.error}`);
     }
   };
 
@@ -64,12 +64,12 @@ export default function AdminPanel() {
       if (idx !== -1) {
         target.splice(idx, 1);
         showToast('⏳ Deleting & Triggering Rebuild...');
-        const success = await DataManager.saveData(newData);
-        if (success) {
+        const result = await DataManager.saveData(newData);
+        if (result.success) {
           setData(newData);
           showToast('🗑️ Item deleted & Rebuild triggered!');
         } else {
-          showToast('❌ Failed to delete from GitHub.');
+          showToast(`❌ Failed to delete: ${result.error}`);
         }
       }
     }
@@ -78,18 +78,18 @@ export default function AdminPanel() {
 
   const addItem = async (sectionKey, template) => {
     showToast('⏳ Adding & Triggering Rebuild...');
-    const success = await DataManager.addItem(sectionKey, { ...template });
-    if (success) {
+    const result = await DataManager.addItem(sectionKey, { ...template });
+    if (result.success) {
       setData(DataManager.getData());
       showToast('✅ Item added & Rebuild triggered!');
     } else {
-      showToast('❌ Failed to add item to GitHub.');
+      showToast(`❌ Failed to add item: ${result.error}`);
     }
   };
 
   const updateItemField = async (sectionKey, itemId, field, value) => {
-    const success = await DataManager.updateItem(sectionKey, itemId, { [field]: value });
-    if (success) setData(DataManager.getData());
+    const result = await DataManager.updateItem(sectionKey, itemId, { [field]: value });
+    if (result.success) setData(DataManager.getData());
   };
 
   const exportData = () => {
@@ -123,12 +123,12 @@ export default function AdminPanel() {
   const resetData = async () => {
     if (!confirm('Reset all data to defaults? This cannot be undone!')) return;
     showToast('⏳ Resetting & Triggering Rebuild...');
-    const success = await DataManager.resetToDefaults();
-    if (success) {
+    const result = await DataManager.resetToDefaults();
+    if (result.success) {
       setData(DataManager.getData());
       showToast('🔄 Reset to defaults & Rebuild triggered!');
     } else {
-      showToast('❌ Failed to reset on GitHub.');
+      showToast(`❌ Failed to reset: ${result.error}`);
     }
   };
 
