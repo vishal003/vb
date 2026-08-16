@@ -15,7 +15,7 @@ export default function Achievements() {
           <div className="achievement-label">Research Papers</div>
         </div>
         <div className="achievement-item animate-fade delay-2">
-          <div className="achievement-number">{d.stats.citations}</div>
+          <div className="achievement-number">{d.stats.citations}+</div>
           <div className="achievement-label">Citations</div>
         </div>
         <div className="achievement-item animate-fade delay-3">

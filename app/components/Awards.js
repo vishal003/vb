@@ -62,6 +62,34 @@ export default function Awards() {
             ))}
           </div>
         );
+      case 'recognition':
+        return (
+          <div className="awards-structured-grid">
+            {(d.recognitions || []).map((rec, i) => (
+              <Reveal key={rec.id} delay={i * 60}>
+                <div className="award-structured-card">
+                  <div className="award-structured-icon">
+                    {getAwardIcon(rec.title, rec.organization)}
+                  </div>
+                  <div className="award-structured-content">
+                    <h3 className="award-structured-title">{rec.title}</h3>
+                    <p className="award-structured-org">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px', verticalAlign: '-2px', opacity: 0.5 }}>
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                        <path d="M9 22v-4h6v4" />
+                        <line x1="8" y1="6" x2="10" y2="6" /><line x1="14" y1="6" x2="16" y2="6" />
+                        <line x1="8" y1="10" x2="10" y2="10" /><line x1="14" y1="10" x2="16" y2="10" />
+                      </svg>
+                      {rec.organization}
+                    </p>
+                    {rec.year && <span className="award-structured-year">{rec.year}</span>}
+                    {rec.description && <p className="award-structured-desc">{rec.description}</p>}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        );
       case 'funded':
         return (
           <div className="funded-projects-grid">
@@ -144,7 +172,13 @@ export default function Awards() {
             onClick={() => setActiveTab('awards')}
             style={{ background: 'none', border: 'none', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', color: activeTab === 'awards' ? 'var(--accent)' : 'var(--text-muted)', borderBottom: activeTab === 'awards' ? '2px solid var(--accent)' : 'none', paddingBottom: '5px', whiteSpace: 'nowrap' }}
           >
-            AWARDS & RECOGNITION
+            AWARDS
+          </button>
+          <button
+            onClick={() => setActiveTab('recognition')}
+            style={{ background: 'none', border: 'none', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', color: activeTab === 'recognition' ? 'var(--accent)' : 'var(--text-muted)', borderBottom: activeTab === 'recognition' ? '2px solid var(--accent)' : 'none', paddingBottom: '5px', whiteSpace: 'nowrap' }}
+          >
+            RECOGNITION
           </button>
           <button
             onClick={() => setActiveTab('funded')}

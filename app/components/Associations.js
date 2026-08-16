@@ -29,7 +29,7 @@ export default function Associations() {
             </span>
             <div className="cert-info">
               <div className="cert-title">{item.organization || item.journal || item.title || "Association"}</div>
-              <div className="cert-issuer">{item.membershipId || item.role || item.venue || ""}</div>
+              {activeTab === 'memberships' && <div className="cert-issuer">{item.membershipId || item.role || item.venue || ""}</div>}
             </div>
           </div>
         ))}

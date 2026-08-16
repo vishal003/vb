@@ -79,11 +79,7 @@ export default function Hero() {
           {d.personal.bio}
         </p>
 
-        <div className="hero-buttons animate-fade delay-5">
-          <a href={d.personal.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn-outline">
-            {Icons.externalLink} Research Profile
-          </a>
-        </div>
+
       </div>
     </section>
   );

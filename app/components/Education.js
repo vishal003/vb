@@ -7,7 +7,7 @@ export default function Education() {
     <section className="section section-white">
       <div className="section-title-wrapper">
         <span className="section-bg-text">QUALIFICATION</span>
-        <h2 className="section-title">Education</h2>
+        <h2 className="section-title">Qualification</h2>
       </div>
       <div style={{ maxWidth: '750px' }}>
         <div className="timeline">

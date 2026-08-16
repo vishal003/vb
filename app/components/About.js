@@ -63,9 +63,9 @@ export default function About() {
           </div>
         </div>
 
-        {/* What I Do */}
+        {/* Areas of Expertise */}
         <div className="section-title-wrapper" style={{ marginBottom: '30px' }}>
-          <h3 className="section-title" style={{ fontSize: '24px' }}>What I Do</h3>
+          <h3 className="section-title" style={{ fontSize: '24px' }}>Areas of Expertise</h3>
         </div>
 
         <div className="services-grid">
@@ -79,11 +79,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* Research Profiles Section */}
+      {/* Social Appearance Section */}
       <section className="section section-alt">
         <div className="section-title-wrapper">
-          <span className="section-bg-text">RESEARCH</span>
-          <h3 className="section-title" style={{ fontSize: '24px' }}>Research Links</h3>
+          <span className="section-bg-text">SOCIAL APPEARANCE</span>
+          <h3 className="section-title" style={{ fontSize: '24px' }}>Social Appearance</h3>
         </div>
         <div className="research-grid">
           {d.researchProfiles.map(rp => (
@@ -95,6 +95,12 @@ export default function About() {
                 {rp.icon === 'wos' && Icons.globe}
                 {rp.icon === 'vidwan' && Icons.education}
                 {rp.icon === 'linkedin' && Icons.linkedin}
+                {rp.icon === 'globe' && Icons.globe}
+                {rp.icon === 'youtube' && (
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                )}
               </div>
               <div className="research-link-info">
                 <h4>{rp.name}</h4>

@@ -1,4 +1,5 @@
 'use client';
+import { useState, useEffect } from 'react';
 import { useData } from './DataProvider';
 
 // Issuer-specific SVG icons for a polished, branded look
@@ -77,15 +78,43 @@ function getCertColor(issuer) {
 
 export default function Certifications() {
   const d = useData();
+  const issuers = Array.from(new Set((d.certifications || []).map(c => c.issuer)));
+  const [activeTab, setActiveTab] = useState(issuers[0] || '');
+
+  useEffect(() => {
+    if (!issuers.includes(activeTab) && issuers.length > 0) {
+      setActiveTab(issuers[0]);
+    }
+  }, [issuers, activeTab]);
+
+  const filteredCerts = (d.certifications || []).filter(c => c.issuer === activeTab);
+
   return (
     <section className="section section-white">
       <div className="section-title-wrapper">
         <span className="section-bg-text">CERTIFICATIONS</span>
         <h2 className="section-title">Certifications</h2>
-        <p className="section-subtitle">Industry-recognized professional certifications and credentials.</p>
       </div>
+
+      <div style={{ display: 'flex', gap: '20px', marginBottom: '30px', borderBottom: '2px solid var(--border)', paddingBottom: '10px', overflowX: 'auto', whiteSpace: 'nowrap' }}>
+        {issuers.map(issuer => (
+          <button
+            key={issuer}
+            onClick={() => setActiveTab(issuer)}
+            style={{
+              background: 'none', border: 'none', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer',
+              color: activeTab === issuer ? 'var(--accent)' : 'var(--text-muted)',
+              borderBottom: activeTab === issuer ? '2px solid var(--accent)' : 'none',
+              paddingBottom: '5px'
+            }}
+          >
+            {issuer.toUpperCase()}
+          </button>
+        ))}
+      </div>
+
       <div className="cert-grid">
-        {d.certifications.map((cert) => {
+        {filteredCerts.map((cert) => {
           const brandColor = getCertColor(cert.issuer);
           return (
             <div className="cert-item" key={cert.id}>
@@ -107,7 +136,8 @@ export default function Certifications() {
               </span>
               <div className="cert-info">
                 <div className="cert-title">{cert.title}</div>
-                <div className="cert-issuer">{cert.issuer} — {cert.category}</div>
+                {cert.details && <div className="cert-issuer">{cert.details}</div>}
+                {cert.certId && cert.certId !== '-' && <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>ID: {cert.certId}</div>}
               </div>
             </div>
           );
