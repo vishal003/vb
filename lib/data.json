@@ -3,8 +3,8 @@
     "name": "Dr. Vishal S. Badgujar",
     "firstName": "Dr. Vishal S. Badgujar",
     "lastName": "Badgujar",
-    "title": "Assistant Professor (PhD Computer Engineering)",
-    "department": "Information Technology",
+    "title": "Assistant Professor (PhD in Computer Engineering)",
+    "department": "Computer Engineering",
     "institution": "A.P. Shah Institute of Technology, Thane",
     "university": "Mumbai University, India",
     "photo": "/images/gallery/vishal.png",
@@ -152,6 +152,46 @@
       "institution": "Aurangabad Board",
       "year": "2005",
       "description": ""
+    },
+    {
+      "degree": "",
+      "specialization": "",
+      "institution": "",
+      "year": "",
+      "description": "",
+      "id": "education_1786861696614_76tqt"
+    },
+    {
+      "degree": "",
+      "specialization": "",
+      "institution": "",
+      "year": "",
+      "description": "",
+      "id": "education_1786861997248_chttn"
+    },
+    {
+      "degree": "",
+      "specialization": "",
+      "institution": "",
+      "year": "",
+      "description": "",
+      "id": "education_1786862002802_t125t"
+    },
+    {
+      "degree": "",
+      "specialization": "",
+      "institution": "",
+      "year": "",
+      "description": "",
+      "id": "education_1786862010778_kyd90"
+    },
+    {
+      "degree": "",
+      "specialization": "",
+      "institution": "",
+      "year": "",
+      "description": "",
+      "id": "education_1786862024071_wklyh"
     }
   ],
   "experience": [
