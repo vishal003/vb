@@ -6,7 +6,9 @@ export async function POST(request) {
     
     // Ensure environment variables are set
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-    const GITHUB_REPO = process.env.GITHUB_REPO || 'vishal003/vb';
+    let GITHUB_REPO = process.env.GITHUB_REPO || 'vishal003/vb';
+    // Clean up repo name in case user pasted full URL
+    GITHUB_REPO = GITHUB_REPO.replace(/https?:\/\/github\.com\//, '').replace('.git', '').trim();
     const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
     const FILE_PATH = 'lib/data.json';
     
