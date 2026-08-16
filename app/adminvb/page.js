@@ -18,10 +18,15 @@ export default function AdminPanel() {
     setTimeout(() => setToast(''), 3000);
   };
 
-  const saveAll = (newData) => {
-    DataManager.saveData(newData);
-    setData({ ...newData });
-    showToast('✅ Changes saved successfully!');
+  const saveAll = async (newData) => {
+    showToast('⏳ Saving to GitHub & Triggering Rebuild...');
+    const success = await DataManager.saveData(newData);
+    if (success) {
+      setData({ ...newData });
+      showToast('✅ Saved successfully & Rebuild triggered!');
+    } else {
+      showToast('❌ Failed to save to GitHub.');
+    }
   };
 
   const handlePersonalChange = (field, value) => {
@@ -46,7 +51,7 @@ export default function AdminPanel() {
     setConfirmModal({ sectionKey, itemId });
   };
 
-  const confirmDelete = () => {
+  const confirmDelete = async () => {
     if (!confirmModal) return;
     const { sectionKey, itemId } = confirmModal;
     // Operate directly on current data state to avoid deepMerge issues
@@ -58,23 +63,33 @@ export default function AdminPanel() {
       const idx = target.findIndex(x => x.id === itemId);
       if (idx !== -1) {
         target.splice(idx, 1);
-        DataManager.saveData(newData);
-        setData(newData);
-        showToast('🗑️ Item deleted!');
+        showToast('⏳ Deleting & Triggering Rebuild...');
+        const success = await DataManager.saveData(newData);
+        if (success) {
+          setData(newData);
+          showToast('🗑️ Item deleted & Rebuild triggered!');
+        } else {
+          showToast('❌ Failed to delete from GitHub.');
+        }
       }
     }
     setConfirmModal(null);
   };
 
-  const addItem = (sectionKey, template) => {
-    DataManager.addItem(sectionKey, { ...template });
-    setData(DataManager.getData());
-    showToast('✅ Item added!');
+  const addItem = async (sectionKey, template) => {
+    showToast('⏳ Adding & Triggering Rebuild...');
+    const success = await DataManager.addItem(sectionKey, { ...template });
+    if (success) {
+      setData(DataManager.getData());
+      showToast('✅ Item added & Rebuild triggered!');
+    } else {
+      showToast('❌ Failed to add item to GitHub.');
+    }
   };
 
-  const updateItemField = (sectionKey, itemId, field, value) => {
-    DataManager.updateItem(sectionKey, itemId, { [field]: value });
-    setData(DataManager.getData());
+  const updateItemField = async (sectionKey, itemId, field, value) => {
+    const success = await DataManager.updateItem(sectionKey, itemId, { [field]: value });
+    if (success) setData(DataManager.getData());
   };
 
   const exportData = () => {
@@ -105,11 +120,16 @@ export default function AdminPanel() {
     input.click();
   };
 
-  const resetData = () => {
+  const resetData = async () => {
     if (!confirm('Reset all data to defaults? This cannot be undone!')) return;
-    DataManager.resetToDefaults();
-    setData(DataManager.getData());
-    showToast('🔄 Reset to defaults!');
+    showToast('⏳ Resetting & Triggering Rebuild...');
+    const success = await DataManager.resetToDefaults();
+    if (success) {
+      setData(DataManager.getData());
+      showToast('🔄 Reset to defaults & Rebuild triggered!');
+    } else {
+      showToast('❌ Failed to reset on GitHub.');
+    }
   };
 
   if (!data) return <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', background: '#0a0f1e', color: '#e8eaf0' }}>Loading...</div>;
