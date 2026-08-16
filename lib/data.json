@@ -1,12 +1,12 @@
 {
   "personal": {
-    "name": "Dr. Vishal S. Badgujar",
+    "name": "Dr. Vishal Sahebrao Badgujar",
     "firstName": "Dr. Vishal S. Badgujar",
     "lastName": "Badgujar",
     "title": "Assistant Professor (PhD in Computer Engineering)",
-    "department": "Information Technology",
+    "department": "Department of Information Technology",
     "institution": "A.P. Shah Institute of Technology, Thane",
-    "university": "Mumbai University, India",
+    "university": "University of Mumbai, Maharashtra, India",
     "photo": "/images/gallery/vishal.png",
     "email": "vishalbadgujar4@gmail.com",
     "phone": "+91 7709933639",
@@ -97,10 +97,10 @@
     "publications": 24,
     "citations": 200,
     "hIndex": 6,
-    "i10Index": 5,
+    "i10Index": 8,
     "yearsExperience": 11,
     "patents": 2,
-    "copyrights": 5,
+    "copyrights": 8,
     "books": 2,
     "conferences": 21
   },
@@ -115,15 +115,15 @@
   "education": [
     {
       "id": "edu1",
-      "degree": "Ph.D. in Computer Engineering",
-      "specialization": "Risk Level Analysis of AI-Based Open-Source Architecture",
+      "degree": "Doctor of Philosophy (Ph.D.)",
+      "specialization": "Computer Engineering",
       "institution": "University of Mumbai",
       "year": "2026",
-      "description": "Thesis: Risk Level Analysis of AI-Based Open-Source Architecture. Supervisor: Dr. Chandrashekhar Raut"
+      "description": "Thesis Topic : Risk Level Analysis of AI-Based Open-Source Architecture. \nSupervisor: Dr. Chandrashekhar Raut"
     },
     {
       "id": "edu2",
-      "degree": "M.E. in Computer Engineering",
+      "degree": "Master of Engineering (M.E.)",
       "specialization": "Computer Engineering",
       "institution": "University of Mumbai",
       "year": "2014",
@@ -131,7 +131,7 @@
     },
     {
       "id": "edu3",
-      "degree": "B.E. in Information Technology",
+      "degree": "Bachelor of Engineering (B.E.)",
       "specialization": "Information Technology",
       "institution": "North Maharashtra University",
       "year": "2011",
@@ -224,20 +224,6 @@
   "publications": {
     "journals": [
       {
-        "id": "pub_j1",
-        "title": "EGNCND: Design of an Efficient Graph Network Model for Enhancing Cybersecurity in Network Deployments",
-        "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
-        "journal": "Journal of Information Security and Applications (JISA), Elsevier",
-        "indexed": "(Accepted and in press) (SCIE, Scopus Indexed)"
-      },
-      {
-        "id": "pub_j2",
-        "title": "Design of an Iterative Method for Enhanced Network Security Risk Assessment Incorporating Hierarchical Attention, Multi-Dimensional Centrality, and Adaptive Resilience Simulation",
-        "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
-        "journal": "Journal of Information Security and Applications (JISA), Elsevier",
-        "indexed": "(Accepted and in press) (SCIE, Scopus Indexed)"
-      },
-      {
         "id": "pub_j3",
         "title": "MAOMLB: Advancing Malware Analysis with AI-Based Open-Source Architecture Integrating Machine Learning and Behavioral Techniques",
         "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
@@ -259,13 +245,6 @@
         "journal": "Industrial Engineering Journal",
         "year": "2023",
         "indexed": "UGC CARE Group-1"
-      },
-      {
-        "id": "pub_j6",
-        "title": "Effect of Blackhole Intrusion in Wireless Networks",
-        "authors": "Badgujar, V., Dhage, S.",
-        "journal": "International Journal of Computer Engineering, and Application (IJCEA)",
-        "year": "2017"
       }
     ],
     "conferences": [
@@ -451,6 +430,15 @@
         "conference": "IEEE ICSCET",
         "year": "2018",
         "link": "https://ieeexplore.ieee.org/document/8537285"
+      },
+      {
+        "title": "",
+        "authors": "",
+        "conference": "",
+        "year": "",
+        "indexed": "",
+        "link": "",
+        "id": "publications_conferences_1786902069157_q79z3"
       }
     ],
     "sci": []
