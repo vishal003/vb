@@ -46,22 +46,14 @@
   "researchProfiles": [
     {
       "id": "rp1",
-      "name": "ORCID ID",
-      "url": "https://orcid.org/0000-0002-8265-4168",
-      "icon": "orcid",
-      "color": "#A6CE39",
-      "description": "0000-0002-8265-4168"
+      "name": "Google Scholar",
+      "url": "https://scholar.google.co.in/citations?hl=en&pli=1&user=CHbeaF0AAAAJ",
+      "icon": "google-scholar",
+      "color": "#4285F4",
+      "description": "200+ Citations, H-Index: 6"
     },
     {
       "id": "rp2",
-      "name": "Web of Science",
-      "url": "https://www.webofscience.com/wos/author/record/L-7930-2018",
-      "icon": "wos",
-      "color": "#5C2D91",
-      "description": "ID: L-7930-2018"
-    },
-    {
-      "id": "rp3",
       "name": "Scopus",
       "url": "https://www.scopus.com/authid/detail.uri?authorId=57205288144",
       "icon": "scopus",
@@ -69,76 +61,36 @@
       "description": "Author ID: 57205288144"
     },
     {
+      "id": "rp3",
+      "name": "ORCID",
+      "url": "https://orcid.org/0000-0002-8265-4168",
+      "icon": "orcid",
+      "color": "#A6CE39",
+      "description": "0000-0002-8265-4168"
+    },
+    {
       "id": "rp4",
-      "name": "Google Scholar",
-      "url": "https://scholar.google.co.in/citations?hl=en&pli=1&user=CHbeaF0AAAAJ",
-      "icon": "google-scholar",
-      "color": "#4285F4",
-      "description": "200+ Citations"
+      "name": "Web of Science",
+      "url": "https://www.webofscience.com/wos/author/record/L-7930-2018",
+      "icon": "wos",
+      "color": "#5C2D91",
+      "description": "ID: L-7930-2018, H-Index: 3"
     },
     {
       "id": "rp5",
-      "name": "Semantics Scholar",
-      "url": "https://www.semanticscholar.org/author/V.-Badgujar/52053006",
-      "icon": "globe",
-      "color": "#4b3e99",
-      "description": "Profile"
-    },
-    {
-      "id": "rp6",
-      "name": "ResearchGate",
-      "url": "https://www.researchgate.net/profile/Vishal-Badgujar-2",
-      "icon": "globe",
-      "color": "#00ccbb",
-      "description": "Profile"
-    },
-    {
-      "id": "rp7",
-      "name": "Vidwan ID",
+      "name": "VIDWAN",
       "url": "https://vidwan.inflibnet.ac.in/profile/379828",
       "icon": "vidwan",
       "color": "#0077B6",
       "description": "ID: 379828"
     },
     {
-      "id": "rp8",
-      "name": "Research ID",
-      "url": "https://researchid.co/vsbadgujar",
-      "icon": "globe",
-      "color": "#333333",
-      "description": "vsbadgujar"
-    },
-    {
-      "id": "rp9",
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/vishalbadgujar/",
+      "id": "rp6",
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/vishalbadgujar",
       "icon": "linkedin",
       "color": "#0A66C2",
       "description": "Professional Network"
-    },
-    {
-      "id": "rp10",
-      "name": "OpenReview ID",
-      "url": "https://openreview.net/profile?id=~Vishal_Sahebrao_Badgujar1",
-      "icon": "globe",
-      "color": "#8c1b13",
-      "description": "~Vishal_Sahebrao_Badgujar1"
-    },
-    {
-      "id": "rp11",
-      "name": "Technical Blog",
-      "url": "https://vishtech4u.blogspot.com/",
-      "icon": "globe",
-      "color": "#f57c00",
-      "description": "Blog"
-    },
-    {
-      "id": "rp12",
-      "name": "Youtube Channel",
-      "url": "https://www.youtube.com/@vishalbadgujar3213",
-      "icon": "youtube",
-      "color": "#FF0000",
-      "description": "Channel"
     }
   ],
   "stats": {
@@ -267,6 +219,15 @@
         "Lecture delivery",
         "Practical sessions"
       ]
+    },
+    {
+      "role": "sdfsdf",
+      "organization": "dfgdsfg",
+      "duration": "sdfsdfsdfsdfdsfsdf",
+      "type": "Teaching",
+      "description": "sdfsdfsfsdgfgthr",
+      "responsibilities": [],
+      "id": "experience_1786866023890_3ebvd"
     }
   ],
   "publications": {
@@ -572,11 +533,60 @@
   ],
   "awards": [
     {
+      "id": "aw1",
+      "title": "IEEE Senior Member",
+      "organization": "IEEE",
+      "year": "",
+      "description": "Recognized as IEEE Senior Member for significant contributions."
+    },
+    {
+      "id": "aw2",
+      "title": "Best Faculty Overall Performance",
+      "organization": "APSIT, Thane – Dept. of IT",
+      "year": "",
+      "description": "Best faculty overall performance in Department of Information Technology."
+    },
+    {
+      "id": "aw3",
+      "title": "Red Hat Academy Program Educator",
+      "organization": "Red Hat",
+      "year": "2024, 2025 & 2026",
+      "description": "Certified Red Hat Academy Program Educator for consecutive years."
+    },
+    {
       "id": "aw4",
       "title": "Red Hat Learning Community Mastery Series Winner",
       "organization": "Red Hat",
       "year": "",
       "description": "Winner of the Red Hat Learning Community Mastery Series."
+    },
+    {
+      "id": "aw5",
+      "title": "Excellent Reviewer Rating",
+      "organization": "Web of Science",
+      "year": "",
+      "description": "Excellent reviewer rating for quality reviews."
+    },
+    {
+      "id": "aw6",
+      "title": "BluePrism Best Performing Educator",
+      "organization": "BluePrism",
+      "year": "",
+      "description": "Best performing educator recognition."
+    },
+    {
+      "id": "aw7",
+      "title": "GATE 2012 Qualified",
+      "organization": "GATE",
+      "year": "2012",
+      "description": "Qualified GATE 2012."
+    },
+    {
+      "id": "aw8",
+      "title": "Active Reviewer Recognition",
+      "organization": "Elsevier & Springer",
+      "year": "",
+      "description": "Recognition as Active Reviewer for Elsevier and Springer journals."
     },
     {
       "id": "aw9",
@@ -586,104 +596,73 @@
       "description": "STAR QC Award in NPTEL Translation and Quality Review Project."
     },
     {
-      "id": "aw2",
-      "title": "Best Faculty Overall Performance",
-      "organization": "APSIT, Thane – Dept. of IT",
+      "id": "aw10",
+      "title": "Selected Reviewer for CS Standards",
+      "organization": "CSTA, USA",
       "year": "",
-      "description": "Best faculty overall performance in Department of Information Technology."
+      "description": "Selected Reviewer for Computer Science Standards Revision by CSTA, USA."
     }
   ],
   "certifications": [
     {
-      "id": "c1",
-      "title": "Red Hat Certified System Administrator",
+      "id": "cert1",
+      "title": "Red Hat Certified System Administrator (RHCSA)",
       "issuer": "Red Hat",
-      "details": "RHCSA Certified",
-      "certId": "210-143-749"
+      "category": "Cloud & DevOps"
     },
     {
-      "id": "c2",
-      "title": "Oracle Cloud Infrastructure 2023 Certified Architect Associate",
+      "id": "cert2",
+      "title": "Oracle Cloud Infrastructure Architect Associate",
       "issuer": "Oracle",
-      "details": "OCI2023 CAA Certified",
-      "certId": "3047155130CI2023CAA"
+      "category": "Cloud & DevOps"
     },
     {
-      "id": "c3",
-      "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+      "id": "cert3",
+      "title": "Oracle Cloud Infrastructure Foundations",
       "issuer": "Oracle",
-      "details": "OCIF2023 CA Certified",
-      "certId": "3047155130CIF2023CA"
+      "category": "Cloud & DevOps"
     },
     {
-      "id": "c4",
-      "title": "Microsoft Azure Cloud AI Fundamentals Certification",
+      "id": "cert4",
+      "title": "Microsoft Azure Fundamentals (AZ-900)",
       "issuer": "Microsoft",
-      "details": "AI-900 Certified",
-      "certId": "EH819D-00F4C7"
+      "category": "Cloud & DevOps"
     },
     {
-      "id": "c5",
-      "title": "Microsoft Azure Cloud Fundamentals Certification",
-      "issuer": "Microsoft",
-      "details": "AZ-900 Certified",
-      "certId": "I760-9475"
-    },
-    {
-      "id": "c6",
-      "title": "Google Certified Educator Level 1",
-      "issuer": "Google",
-      "details": "GCE Level 1",
-      "certId": "-"
-    },
-    {
-      "id": "c7",
-      "title": "Google Certified Educator Level 2",
-      "issuer": "Google",
-      "details": "GCE Level 2",
-      "certId": "-"
-    },
-    {
-      "id": "c8",
-      "title": "CNSS Network Security Specialist",
-      "issuer": "ICSI",
-      "details": "CNSS Certified (UK)",
-      "certId": "18337926"
-    },
-    {
-      "id": "c9",
-      "title": "International Software Testing Quality Board",
-      "issuer": "ISTQB",
-      "details": "ISTQB Certified",
-      "certId": "-"
-    },
-    {
-      "id": "c10",
-      "title": "IBM Big Data Foundation",
-      "issuer": "IBM",
-      "details": "",
-      "certId": "-"
-    },
-    {
-      "id": "c11",
-      "title": "IBM Hadoop Foundation",
-      "issuer": "IBM",
-      "details": "",
-      "certId": "-"
-    },
-    {
-      "id": "c12",
+      "id": "cert5",
       "title": "NVIDIA Fundamentals of Deep Learning",
       "issuer": "NVIDIA",
-      "details": "",
-      "certId": "-"
+      "category": "AI / Data Science"
     },
     {
-      "id": "c13",
+      "id": "cert6",
+      "title": "IBM Big Data Foundation",
+      "issuer": "IBM",
+      "category": "AI / Data Science"
+    },
+    {
+      "id": "cert7",
+      "title": "IBM Hadoop Foundation",
+      "issuer": "IBM",
+      "category": "AI / Data Science"
+    },
+    {
+      "id": "cert8",
+      "title": "ICSI Certified Network Security Specialist",
+      "issuer": "ICSI",
+      "category": "Cyber Security"
+    },
+    {
+      "id": "cert9",
+      "title": "Google Certified Educator Level 1 & 2",
+      "issuer": "Google",
+      "category": "Teaching & Academic"
+    },
+    {
+      "id": "cert10",
       "title": "NPTEL Elite Certifications (Cloud, Big Data, Ethical Hacking)",
-      "issuer": "NPTEL",
-      "details": "",
-      "certId": "-"
+      "issuer": "NPTEL / IIT",
+      "category": "Teaching & Academic"
     }
   ],
   "professionalActivities": {
@@ -774,52 +753,52 @@
     "conferenceAssociations": [
       {
         "id": "ca1",
-        "journal": "Springer LNNS (Lecture Notes in Networks and Systems)",
+        "organization": "Springer LNNS",
         "role": "Author / Contributor"
       },
       {
         "id": "ca2",
-        "journal": "Springer SIST (Smart Innovation, Systems and Technologies)",
+        "organization": "Springer LNEE",
         "role": "Author / Contributor"
       },
       {
         "id": "ca3",
-        "journal": "IEEE I2CT (International Conference on Convergence to Digital World)",
+        "organization": "Springer SIST",
         "role": "Author / Contributor"
       },
       {
         "id": "ca4",
-        "journal": "IEEE ICCCSP (International Conference on Computer, Communication, and Signal Processing)",
+        "organization": "BookRivers",
         "role": "Author / Contributor"
       },
       {
         "id": "ca5",
-        "journal": "IEEE ICACCS (International Conference on Advanced Computing and Communication Systems)",
+        "organization": "IEEE I2CT",
         "role": "Author / Contributor"
       },
       {
         "id": "ca6",
-        "journal": "Springer LNEE (Lecture Notes in Electrical Engineering)",
+        "organization": "IEEE ICCDW",
         "role": "Author / Contributor"
       },
       {
         "id": "ca7",
-        "journal": "BookRivers",
+        "organization": "IEEE ICCCSP",
         "role": "Author / Contributor"
       },
       {
         "id": "ca8",
-        "journal": "IEEE ICCDW (International Conference on Convergence to Digital World)",
+        "organization": "IEEE ic-ETITE",
         "role": "Author / Contributor"
       },
       {
         "id": "ca9",
-        "journal": "IEEE ic-ETITE (International Conference on Emerging Trends in Information Technology and Engineering)",
+        "organization": "IEEE ICACCS",
         "role": "Author / Contributor"
       },
       {
         "id": "ca10",
-        "journal": "IEEE ICSCET (International Conference on Smart Computing and Electronic Enterprise)",
+        "organization": "IEEE ICSCET",
         "role": "Author / Contributor"
       }
     ],
