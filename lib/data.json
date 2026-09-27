@@ -725,6 +725,60 @@
       "issuer": "NPTEL / IIT",
       "category": "Teaching & Academic",
       "id": "certifications_1790487432372_wz10z"
+    },
+    {
+      "title": "International Software Testing Quality Board - Certified Tester",
+      "issuer": "ISTQB",
+      "category": "Software Testing",
+      "id": "certifications_1790488978336_xb6qt"
+    },
+    {
+      "title": " Docker Essential a Developer Introduction",
+      "issuer": "IBM",
+      "category": "Docker",
+      "id": "certifications_1790489074271_jypjg"
+    },
+    {
+      "title": "Specialization in Big Data",
+      "issuer": "Coursera",
+      "category": "Big Data",
+      "id": "certifications_1790489116178_96gh8"
+    },
+    {
+      "title": "Specialization in Architecting with Google Compute Engine",
+      "issuer": "Coursera",
+      "category": "Google Cloud",
+      "id": "certifications_1790489131812_42g8t"
+    },
+    {
+      "title": "Blue Prism Robotic Process Automation (RPA) Associate Developer",
+      "issuer": "Blue Prism",
+      "category": "Blue Prism",
+      "id": "certifications_1790489211268_t2tyt"
+    },
+    {
+      "title": "Certified CCNA Routing and Switching: Routing and Switching Essentials Course by CISCO Academy",
+      "issuer": "CISCO ACADEMY",
+      "category": "Routing and Switching Essentials",
+      "id": "certifications_1790489265142_ixvat"
+    },
+    {
+      "title": "Certified Palo Alto Cybersecurity Foundations",
+      "issuer": "Other",
+      "category": "Other",
+      "id": "certifications_1790489319136_hyqts"
+    },
+    {
+      "title": "Certified Dell EMC Academic Associate, Data Science and Big data Analytics",
+      "issuer": "Other",
+      "category": "Other",
+      "id": "certifications_1790489319929_gs9rk"
+    },
+    {
+      "title": "Certified Corel Designer",
+      "issuer": "Other",
+      "category": "Other",
+      "id": "certifications_1790489450871_wij8z"
     }
   ],
   "professionalActivities": {
