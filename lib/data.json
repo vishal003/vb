@@ -270,256 +270,274 @@
     }
   ],
   "publications": {
-    "journals": [
+    "categories": [
       {
-        "id": "pub_j1",
-        "title": "EGNCND: Design of an Efficient Graph Network Model for Enhancing Cybersecurity in Network Deployments",
-        "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
-        "journal": "Journal of Information Security and Applications (JISA), Elsevier",
-        "indexed": "(Accepted and in press) (SCIE, Scopus Indexed)"
+        "id": "journals",
+        "name": "Journals",
+        "items": [
+          {
+            "id": "pub_j1",
+            "title": "EGNCND: Design of an Efficient Graph Network Model for Enhancing Cybersecurity in Network Deployments",
+            "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
+            "indexed": "(Accepted and in press) (SCIE, Scopus Indexed)",
+            "venue": "Journal of Information Security and Applications (JISA), Elsevier"
+          },
+          {
+            "id": "pub_j2",
+            "title": "Design of an Iterative Method for Enhanced Network Security Risk Assessment Incorporating Hierarchical Attention, Multi-Dimensional Centrality, and Adaptive Resilience Simulation",
+            "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
+            "indexed": "(Accepted and in press) (SCIE, Scopus Indexed)",
+            "venue": "Journal of Information Security and Applications (JISA), Elsevier"
+          },
+          {
+            "id": "pub_j3",
+            "title": "MAOMLB: Advancing Malware Analysis with AI-Based Open-Source Architecture Integrating Machine Learning and Behavioral Techniques",
+            "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
+            "indexed": "Scopus Indexed",
+            "venue": "Journal of Applied Research and Technology (JART)"
+          },
+          {
+            "id": "pub_j4",
+            "title": "RNN Based Rapid Threat Detection And Response System",
+            "authors": "Badgujar, V., Raut, C.",
+            "year": "2023",
+            "indexed": "UGC CARE Group-1",
+            "venue": "Industrial Engineering Journal"
+          },
+          {
+            "id": "pub_j5",
+            "title": "Secrets Of Mindmap In A Education",
+            "authors": "Badgujar, V., Raut, C.",
+            "year": "2023",
+            "indexed": "UGC CARE Group-1",
+            "venue": "Industrial Engineering Journal"
+          },
+          {
+            "id": "pub_j6",
+            "title": "Effect of Blackhole Intrusion in Wireless Networks",
+            "authors": "Badgujar, V., Dhage, S.",
+            "year": "2017",
+            "venue": "International Journal of Computer Engineering, and Application (IJCEA)"
+          }
+        ]
       },
       {
-        "id": "pub_j2",
-        "title": "Design of an Iterative Method for Enhanced Network Security Risk Assessment Incorporating Hierarchical Attention, Multi-Dimensional Centrality, and Adaptive Resilience Simulation",
-        "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
-        "journal": "Journal of Information Security and Applications (JISA), Elsevier",
-        "indexed": "(Accepted and in press) (SCIE, Scopus Indexed)"
+        "id": "conferences",
+        "name": "Conferences",
+        "items": [
+          {
+            "id": "pub_c1",
+            "title": "VSecureSphere: Developing Virtual Lab for Simulating Safe Environment for Multiple Cyber-Attack Patterns",
+            "authors": "Zagade, S., Shardul, M., Patole, S., Badgujar, V., et al.",
+            "year": "2026",
+            "link": "https://doi.org/10.1007/978-981-96-9724-3_16",
+            "venue": "Springer LNEE"
+          },
+          {
+            "id": "pub_c2",
+            "title": "ProjectSpace: A Comprehensive Framework for Automated Project Guide Allocation in Academic Institutions",
+            "authors": "Bhavsar, P.H., Badgujar, V.S, et al.",
+            "year": "2026",
+            "link": "https://doi.org/10.1007/978-981-96-8107-5_24",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c3",
+            "title": "Deep Learning-Based Hierarchical Attention Mechanism for Risk Prediction",
+            "authors": "Badgujar, V.S., Raut, C.M.",
+            "year": "2025",
+            "indexed": "Scopus Indexed",
+            "link": "https://doi.org/10.1007/978-981-96-4142-0_37",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c4",
+            "title": "BAOSAML: Behavioral AI-Based Open-Source Architecture for Malware Analysis Using Machine Learning",
+            "authors": "Badgujar, V.S., Raut, C.M.",
+            "year": "2025",
+            "indexed": "Scopus Indexed",
+            "link": "https://doi.org/10.1007/978-981-96-2703-5_37",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c5",
+            "title": "ChatApsit: A Generative AI-Based Comprehensive Web Framework for an Educational Institute",
+            "authors": "Madhur Dukhande, Mayur Jain, Aryan Amin, Kaushal Nikam, Vishal Badgujar, Kiran Deshpande",
+            "year": "2024",
+            "link": "https://link.springer.com/chapter/10.1007/978-981-97-4149-6_16",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c6",
+            "title": "Varishta Rakshak: An AI-Based Comprehensive Web Framework for Ensuring Senior Citizen Care in Real Time",
+            "authors": "Meet Bohra, Yashab Mahimi, Rupesh Mishra, Vishal Badgujar, Kiran Deshpande, Shradha Birje",
+            "year": "2024",
+            "link": "https://link.springer.com/chapter/10.1007/978-981-97-4149-6_14",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c12",
+            "title": "A REVIEW ON SECURITY OF IOT AD-HOC NETWORK IN 5G",
+            "authors": "Nilkanth Talwadekar, Vishal Badgujar, Uttam D. Kolekar",
+            "year": "2023",
+            "link": "https://books.google.co.in/books?hl=en&lr=&id=5HLKEAAAQBAJ&oi=fnd&pg=PA65",
+            "venue": "BookRivers"
+          },
+          {
+            "id": "pub_c7",
+            "title": "AI-ML Based Smart Online Examination Framework",
+            "authors": "Sapre, S., Shinde, K., Shetta, K., Badgujar, V.",
+            "year": "2022",
+            "indexed": "Scopus Indexed",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-98531-8_2",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c8",
+            "title": "Automation of Supply Chain Management for Healthcare",
+            "authors": "Saiya, H., Doshi, S., Seth, J., Badgujar, V., Kalme, G.",
+            "year": "2022",
+            "indexed": "Scopus Indexed",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-98531-8_4",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c9",
+            "title": "Spaced Repetition Based Adaptive E-Learning Framework",
+            "authors": "Kharwal, A., Umrotkar, N., Godambe, V., Kolekar, U., Badgujar, V.",
+            "year": "2022",
+            "indexed": "Scopus Indexed",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-98531-8_3",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c11",
+            "title": "On Trade Cloud Ecosystem Structure for Shared Learning",
+            "authors": "Narawade, V.E., Badgujar, V.S.",
+            "year": "2022",
+            "indexed": "Scopus Indexed",
+            "link": "https://link.springer.com/chapter/10.1007/978-981-16-5987-4_54",
+            "venue": "Springer LNNS"
+          },
+          {
+            "id": "pub_c10",
+            "title": "Smart UAV Framework for Multi-Assistance",
+            "authors": "Patil, V., Potphode, V., Potdukhe, U., Badgujar, V., Upadhyaya, K",
+            "year": "2021",
+            "indexed": "Scopus Indexed",
+            "link": "https://link.springer.com/chapter/10.1007/978-981-16-4177-0_26",
+            "venue": "Springer SIST"
+          },
+          {
+            "id": "pub_c13",
+            "title": "Artificial Intelligence based Security Orchestration, Automation and Response System",
+            "authors": "R. Vast, S. Sawant, A. Thorbole, V. Badgujar",
+            "year": "2021",
+            "link": "https://ieeexplore.ieee.org/document/9418109",
+            "venue": "IEEE I2CT"
+          },
+          {
+            "id": "pub_c14",
+            "title": "Autonetics and Administration for IT Laboratories",
+            "authors": "V. Karthikeyan, U. Maity, A. Shetty, S. Nanivadekar, V. Badgujar",
+            "year": "2020",
+            "link": "https://ieeexplore.ieee.org/document/9318644",
+            "venue": "IEEE ICCDW"
+          },
+          {
+            "id": "pub_c15",
+            "title": "Artificial Intelligence based Self-Driving Car",
+            "authors": "H. Thadeshwar, V. Shah, M. Jain, R. Chaudhari, V. Badgujar",
+            "year": "2020",
+            "link": "https://ieeexplore.ieee.org/document/9315223",
+            "venue": "IEEE ICCCSP"
+          },
+          {
+            "id": "pub_c16",
+            "title": "Study on feasibility of Uniform Appraisal System",
+            "authors": "U. Naik, D. Choudhury, A. Devade, A. Aher, V. Badgujar",
+            "year": "2020",
+            "link": "https://ieeexplore.ieee.org/document/9077847",
+            "venue": "IEEE ic-ETITE"
+          },
+          {
+            "id": "pub_c17",
+            "title": "Study on Semi Automation in Uniform Faculty Appraisal System",
+            "authors": "U. Naik, D. Choudhury, A. Devade, A. Aher, V. Badgujar",
+            "year": "2020",
+            "link": "https://ieeexplore.ieee.org/document/9074383",
+            "venue": "IEEE ICACCS"
+          },
+          {
+            "id": "pub_c18",
+            "title": "ML Enabled Surveillance System for Societies",
+            "authors": "P. Chauhan, S. Gupta, R. Arava, S. Nanivadekar, V. Badgujar",
+            "year": "2020",
+            "link": "https://ieeexplore.ieee.org/document/9077746",
+            "venue": "IEEE ic-ETITE"
+          },
+          {
+            "id": "pub_c19",
+            "title": "Case Study on an Android App for Inventory Management System with Sales Prediction for Local Shopkeepers in India",
+            "authors": "T. Tandel, S. Wagal, N. Singh, R. Chaudhari, V. Badgujar",
+            "year": "2020",
+            "link": "https://ieeexplore.ieee.org/abstract/document/9074234",
+            "venue": "IEEE ICACCS"
+          },
+          {
+            "id": "pub_c20",
+            "title": "IoT-Key Towards Automation",
+            "authors": "A. A. Karia, L. V. Budhwani, V. S. Badgujar",
+            "year": "2018",
+            "link": "https://ieeexplore.ieee.org/document/8537261",
+            "venue": "IEEE ICSCET"
+          },
+          {
+            "id": "pub_c21",
+            "title": "All About Cloud: A Systematic Survey",
+            "authors": "A. G. Prajapati, S. J. Sharma, V. S. Badgujar",
+            "year": "2018",
+            "link": "https://ieeexplore.ieee.org/document/8537277",
+            "venue": "IEEE ICSCET"
+          },
+          {
+            "id": "pub_c22",
+            "title": "A Comprehensive Survey on Theoretic Perspective Providing Future Directions on IoT",
+            "authors": "A. A. Patil, V. S. Badgujar",
+            "year": "2018",
+            "link": "https://ieeexplore.ieee.org/document/8537285",
+            "venue": "IEEE ICSCET"
+          }
+        ]
       },
       {
-        "id": "pub_j3",
-        "title": "MAOMLB: Advancing Malware Analysis with AI-Based Open-Source Architecture Integrating Machine Learning and Behavioral Techniques",
-        "authors": "Badgujar, V.S., Raut, C.M., Pande, A.",
-        "journal": "Journal of Applied Research and Technology (JART)",
-        "indexed": "Scopus Indexed"
+        "id": "sci",
+        "name": "SCI",
+        "items": []
       },
       {
-        "id": "pub_j4",
-        "title": "RNN Based Rapid Threat Detection And Response System",
-        "authors": "Badgujar, V., Raut, C.",
-        "journal": "Industrial Engineering Journal",
-        "year": "2023",
-        "indexed": "UGC CARE Group-1"
-      },
-      {
-        "id": "pub_j5",
-        "title": "Secrets Of Mindmap In A Education",
-        "authors": "Badgujar, V., Raut, C.",
-        "journal": "Industrial Engineering Journal",
-        "year": "2023",
-        "indexed": "UGC CARE Group-1"
-      },
-      {
-        "id": "pub_j6",
-        "title": "Effect of Blackhole Intrusion in Wireless Networks",
-        "authors": "Badgujar, V., Dhage, S.",
-        "journal": "International Journal of Computer Engineering, and Application (IJCEA)",
-        "year": "2017"
+        "id": "books",
+        "name": "Books",
+        "items": [
+          {
+            "id": "book1",
+            "title": "Cyber Forensics",
+            "authors": "Vishal Badgujar",
+            "year": "2022",
+            "venue": "University of Mumbai IDOL Publication"
+          },
+          {
+            "id": "book2",
+            "title": "Intrusion Detection System in Wireless Sensor Network: Comparison of Different IDS Schemes",
+            "authors": "Vishal Badgujar, Sudhir Dhage",
+            "year": "2017",
+            "link": "https://www.amazon.com/Intrusion-Detection-System-Wireless-Network/dp/6202015063",
+            "venue": "LAP LAMBERT Academic Publishing"
+          }
+        ]
       }
-    ],
-    "conferences": [
-      {
-        "id": "pub_c1",
-        "title": "VSecureSphere: Developing Virtual Lab for Simulating Safe Environment for Multiple Cyber-Attack Patterns",
-        "authors": "Zagade, S., Shardul, M., Patole, S., Badgujar, V., et al.",
-        "conference": "Springer LNEE",
-        "year": "2026",
-        "link": "https://doi.org/10.1007/978-981-96-9724-3_16"
-      },
-      {
-        "id": "pub_c2",
-        "title": "ProjectSpace: A Comprehensive Framework for Automated Project Guide Allocation in Academic Institutions",
-        "authors": "Bhavsar, P.H., Badgujar, V.S, et al.",
-        "conference": "Springer LNNS",
-        "year": "2026",
-        "link": "https://doi.org/10.1007/978-981-96-8107-5_24"
-      },
-      {
-        "id": "pub_c3",
-        "title": "Deep Learning-Based Hierarchical Attention Mechanism for Risk Prediction",
-        "authors": "Badgujar, V.S., Raut, C.M.",
-        "conference": "Springer LNNS",
-        "year": "2025",
-        "indexed": "Scopus Indexed",
-        "link": "https://doi.org/10.1007/978-981-96-4142-0_37"
-      },
-      {
-        "id": "pub_c4",
-        "title": "BAOSAML: Behavioral AI-Based Open-Source Architecture for Malware Analysis Using Machine Learning",
-        "authors": "Badgujar, V.S., Raut, C.M.",
-        "conference": "Springer LNNS",
-        "year": "2025",
-        "indexed": "Scopus Indexed",
-        "link": "https://doi.org/10.1007/978-981-96-2703-5_37"
-      },
-      {
-        "id": "pub_c5",
-        "title": "ChatApsit: A Generative AI-Based Comprehensive Web Framework for an Educational Institute",
-        "authors": "Madhur Dukhande, Mayur Jain, Aryan Amin, Kaushal Nikam, Vishal Badgujar, Kiran Deshpande",
-        "conference": "Springer LNNS",
-        "year": "2024",
-        "link": "https://link.springer.com/chapter/10.1007/978-981-97-4149-6_16"
-      },
-      {
-        "id": "pub_c6",
-        "title": "Varishta Rakshak: An AI-Based Comprehensive Web Framework for Ensuring Senior Citizen Care in Real Time",
-        "authors": "Meet Bohra, Yashab Mahimi, Rupesh Mishra, Vishal Badgujar, Kiran Deshpande, Shradha Birje",
-        "conference": "Springer LNNS",
-        "year": "2024",
-        "link": "https://link.springer.com/chapter/10.1007/978-981-97-4149-6_14"
-      },
-      {
-        "id": "pub_c7",
-        "title": "AI-ML Based Smart Online Examination Framework",
-        "authors": "Sapre, S., Shinde, K., Shetta, K., Badgujar, V.",
-        "conference": "Springer LNNS",
-        "year": "2022",
-        "indexed": "Scopus Indexed",
-        "link": "https://link.springer.com/chapter/10.1007/978-3-030-98531-8_2"
-      },
-      {
-        "id": "pub_c8",
-        "title": "Automation of Supply Chain Management for Healthcare",
-        "authors": "Saiya, H., Doshi, S., Seth, J., Badgujar, V., Kalme, G.",
-        "conference": "Springer LNNS",
-        "year": "2022",
-        "indexed": "Scopus Indexed",
-        "link": "https://link.springer.com/chapter/10.1007/978-3-030-98531-8_4"
-      },
-      {
-        "id": "pub_c9",
-        "title": "Spaced Repetition Based Adaptive E-Learning Framework",
-        "authors": "Kharwal, A., Umrotkar, N., Godambe, V., Kolekar, U., Badgujar, V.",
-        "conference": "Springer LNNS",
-        "year": "2022",
-        "indexed": "Scopus Indexed",
-        "link": "https://link.springer.com/chapter/10.1007/978-3-030-98531-8_3"
-      },
-      {
-        "id": "pub_c10",
-        "title": "Smart UAV Framework for Multi-Assistance",
-        "authors": "Patil, V., Potphode, V., Potdukhe, U., Badgujar, V., Upadhyaya, K",
-        "conference": "Springer SIST",
-        "year": "2021",
-        "indexed": "Scopus Indexed",
-        "link": "https://link.springer.com/chapter/10.1007/978-981-16-4177-0_26"
-      },
-      {
-        "id": "pub_c11",
-        "title": "On Trade Cloud Ecosystem Structure for Shared Learning",
-        "authors": "Narawade, V.E., Badgujar, V.S.",
-        "conference": "Springer LNNS",
-        "year": "2022",
-        "indexed": "Scopus Indexed",
-        "link": "https://link.springer.com/chapter/10.1007/978-981-16-5987-4_54"
-      },
-      {
-        "id": "pub_c12",
-        "title": "A REVIEW ON SECURITY OF IOT AD-HOC NETWORK IN 5G",
-        "authors": "Nilkanth Talwadekar, Vishal Badgujar, Uttam D. Kolekar",
-        "conference": "BookRivers",
-        "year": "2023",
-        "link": "https://books.google.co.in/books?hl=en&lr=&id=5HLKEAAAQBAJ&oi=fnd&pg=PA65"
-      },
-      {
-        "id": "pub_c13",
-        "title": "Artificial Intelligence based Security Orchestration, Automation and Response System",
-        "authors": "R. Vast, S. Sawant, A. Thorbole, V. Badgujar",
-        "conference": "IEEE I2CT",
-        "year": "2021",
-        "link": "https://ieeexplore.ieee.org/document/9418109"
-      },
-      {
-        "id": "pub_c14",
-        "title": "Autonetics and Administration for IT Laboratories",
-        "authors": "V. Karthikeyan, U. Maity, A. Shetty, S. Nanivadekar, V. Badgujar",
-        "conference": "IEEE ICCDW",
-        "year": "2020",
-        "link": "https://ieeexplore.ieee.org/document/9318644"
-      },
-      {
-        "id": "pub_c15",
-        "title": "Artificial Intelligence based Self-Driving Car",
-        "authors": "H. Thadeshwar, V. Shah, M. Jain, R. Chaudhari, V. Badgujar",
-        "conference": "IEEE ICCCSP",
-        "year": "2020",
-        "link": "https://ieeexplore.ieee.org/document/9315223"
-      },
-      {
-        "id": "pub_c16",
-        "title": "Study on feasibility of Uniform Appraisal System",
-        "authors": "U. Naik, D. Choudhury, A. Devade, A. Aher, V. Badgujar",
-        "conference": "IEEE ic-ETITE",
-        "year": "2020",
-        "link": "https://ieeexplore.ieee.org/document/9077847"
-      },
-      {
-        "id": "pub_c17",
-        "title": "Study on Semi Automation in Uniform Faculty Appraisal System",
-        "authors": "U. Naik, D. Choudhury, A. Devade, A. Aher, V. Badgujar",
-        "conference": "IEEE ICACCS",
-        "year": "2020",
-        "link": "https://ieeexplore.ieee.org/document/9074383"
-      },
-      {
-        "id": "pub_c18",
-        "title": "ML Enabled Surveillance System for Societies",
-        "authors": "P. Chauhan, S. Gupta, R. Arava, S. Nanivadekar, V. Badgujar",
-        "conference": "IEEE ic-ETITE",
-        "year": "2020",
-        "link": "https://ieeexplore.ieee.org/document/9077746"
-      },
-      {
-        "id": "pub_c19",
-        "title": "Case Study on an Android App for Inventory Management System with Sales Prediction for Local Shopkeepers in India",
-        "authors": "T. Tandel, S. Wagal, N. Singh, R. Chaudhari, V. Badgujar",
-        "conference": "IEEE ICACCS",
-        "year": "2020",
-        "link": "https://ieeexplore.ieee.org/abstract/document/9074234"
-      },
-      {
-        "id": "pub_c20",
-        "title": "IoT-Key Towards Automation",
-        "authors": "A. A. Karia, L. V. Budhwani, V. S. Badgujar",
-        "conference": "IEEE ICSCET",
-        "year": "2018",
-        "link": "https://ieeexplore.ieee.org/document/8537261"
-      },
-      {
-        "id": "pub_c21",
-        "title": "All About Cloud: A Systematic Survey",
-        "authors": "A. G. Prajapati, S. J. Sharma, V. S. Badgujar",
-        "conference": "IEEE ICSCET",
-        "year": "2018",
-        "link": "https://ieeexplore.ieee.org/document/8537277"
-      },
-      {
-        "id": "pub_c22",
-        "title": "A Comprehensive Survey on Theoretic Perspective Providing Future Directions on IoT",
-        "authors": "A. A. Patil, V. S. Badgujar",
-        "conference": "IEEE ICSCET",
-        "year": "2018",
-        "link": "https://ieeexplore.ieee.org/document/8537285"
-      }
-    ],
-    "sci": []
+    ]
   },
-  "books": [
-    {
-      "id": "book1",
-      "title": "Cyber Forensics",
-      "authors": "Vishal Badgujar",
-      "publisher": "University of Mumbai IDOL Publication",
-      "year": "2022"
-    },
-    {
-      "id": "book2",
-      "title": "Intrusion Detection System in Wireless Sensor Network: Comparison of Different IDS Schemes",
-      "authors": "Vishal Badgujar, Sudhir Dhage",
-      "publisher": "LAP LAMBERT Academic Publishing",
-      "year": "2017",
-      "link": "https://www.amazon.com/Intrusion-Detection-System-Wireless-Network/dp/6202015063"
-    }
-  ],
   "patents": [
     {
       "id": "pat1",
@@ -593,99 +611,230 @@
       "description": "Best faculty overall performance in Department of Information Technology."
     }
   ],
-  "certifications": [
-    {
-      "id": "c1",
-      "title": "Red Hat Certified System Administrator",
-      "issuer": "Red Hat",
-      "details": "RHCSA Certified",
-      "certId": "210-143-749"
-    },
-    {
-      "id": "c2",
-      "title": "Oracle Cloud Infrastructure 2023 Certified Architect Associate",
-      "issuer": "Oracle",
-      "details": "OCI2023 CAA Certified",
-      "certId": "3047155130CI2023CAA"
-    },
-    {
-      "id": "c3",
-      "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
-      "issuer": "Oracle",
-      "details": "OCIF2023 CA Certified",
-      "certId": "3047155130CIF2023CA"
-    },
-    {
-      "id": "c4",
-      "title": "Microsoft Azure Cloud AI Fundamentals Certification",
-      "issuer": "Microsoft",
-      "details": "AI-900 Certified",
-      "certId": "EH819D-00F4C7"
-    },
-    {
-      "id": "c5",
-      "title": "Microsoft Azure Cloud Fundamentals Certification",
-      "issuer": "Microsoft",
-      "details": "AZ-900 Certified",
-      "certId": "I760-9475"
-    },
-    {
-      "id": "c6",
-      "title": "Google Certified Educator Level 1",
-      "issuer": "Google",
-      "details": "GCE Level 1",
-      "certId": "-"
-    },
-    {
-      "id": "c7",
-      "title": "Google Certified Educator Level 2",
-      "issuer": "Google",
-      "details": "GCE Level 2",
-      "certId": "-"
-    },
-    {
-      "id": "c8",
-      "title": "CNSS Network Security Specialist",
-      "issuer": "ICSI",
-      "details": "CNSS Certified (UK)",
-      "certId": "18337926"
-    },
-    {
-      "id": "c9",
-      "title": "International Software Testing Quality Board",
-      "issuer": "ISTQB",
-      "details": "ISTQB Certified",
-      "certId": "-"
-    },
-    {
-      "id": "c10",
-      "title": "IBM Big Data Foundation",
-      "issuer": "IBM",
-      "details": "",
-      "certId": "-"
-    },
-    {
-      "id": "c11",
-      "title": "IBM Hadoop Foundation",
-      "issuer": "IBM",
-      "details": "",
-      "certId": "-"
-    },
-    {
-      "id": "c12",
-      "title": "NVIDIA Fundamentals of Deep Learning",
-      "issuer": "NVIDIA",
-      "details": "",
-      "certId": "-"
-    },
-    {
-      "id": "c13",
-      "title": "NPTEL Elite Certifications (Cloud, Big Data, Ethical Hacking)",
-      "issuer": "NPTEL",
-      "details": "",
-      "certId": "-"
-    }
-  ],
+  "certifications": {
+    "categories": [
+      {
+        "id": "redhat",
+        "name": "Red Hat",
+        "items": [
+          {
+            "id": "c14",
+            "title": "Red Hat Academy Program Educator 2026",
+            "details": "Red Hat Academy",
+            "certId": "-",
+            "file": "/Certifications/2026 Red Hat Academy - Program Educator.pdf"
+          },
+          {
+            "id": "c15",
+            "title": "Red Hat Academy Learning Community 2024",
+            "details": "Red Hat Academy",
+            "certId": "-",
+            "file": "/Certifications/2024 Red Hat Academy - Learning Community.pdf"
+          },
+          {
+            "id": "c16",
+            "title": "Red Hat Learning Community Ambassador",
+            "details": "Red Hat Learning Community",
+            "certId": "-",
+            "file": "/Certifications/Red Hat Learning Community Ambassador.pdf"
+          },
+          {
+            "id": "c1",
+            "title": "Red Hat Certified System Administrator",
+            "details": "RHCSA Certified",
+            "certId": "210-143-749",
+            "file": "/Certifications/RED HAT CERTIFIED SYSTEM ADMINISTRATOR.pdf"
+          }
+        ]
+      },
+      {
+        "id": "oracle",
+        "name": "Oracle",
+        "items": [
+          {
+            "id": "c2",
+            "title": "Oracle Cloud Infrastructure 2023 Certified Architect Associate",
+            "details": "OCI2023 CAA Certified",
+            "certId": "3047155130CI2023CAA",
+            "file": "/Certifications/Oracle Cloud Infrastructure 2023 Certified Architect Associate.pdf"
+          },
+          {
+            "id": "c3",
+            "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+            "details": "OCIF2023 CA Certified",
+            "certId": "3047155130CIF2023CA",
+            "file": "/Certifications/Oracle Cloud Infrastructure 2023 Certified Foundations Associate.pdf"
+          }
+        ]
+      },
+      {
+        "id": "microsoft",
+        "name": "Microsoft",
+        "items": [
+          {
+            "id": "c4",
+            "title": "Microsoft Azure Cloud AI Fundamentals Certification",
+            "details": "AI-900 Certified",
+            "certId": "EH819D-00F4C7",
+            "file": "/Certifications/Microsoft Certified AI Fundamentals.jpg"
+          },
+          {
+            "id": "c5",
+            "title": "Microsoft Azure Cloud Fundamentals Certification",
+            "details": "AZ-900 Certified",
+            "certId": "I760-9475",
+            "file": "/Certifications/Microsoft Certified Cloud Fundamentals.jpg"
+          }
+        ]
+      },
+      {
+        "id": "google",
+        "name": "Google",
+        "items": [
+          {
+            "id": "c6",
+            "title": "Google Certified Educator Level 1",
+            "details": "GCE Level 1",
+            "certId": "-",
+            "file": "/Certifications/google educator level-1.pdf"
+          },
+          {
+            "id": "c7",
+            "title": "Google Certified Educator Level 2",
+            "details": "GCE Level 2",
+            "certId": "-",
+            "file": "/Certifications/Google Certified Educator Level 2.pdf"
+          }
+        ]
+      },
+      {
+        "id": "icsi",
+        "name": "ICSI",
+        "items": [
+          {
+            "id": "c8",
+            "title": "CNSS Network Security Specialist",
+            "details": "CNSS Certified (UK)",
+            "certId": "18337926",
+            "file": ""
+          }
+        ]
+      },
+      {
+        "id": "istqb",
+        "name": "ISTQB",
+        "items": [
+          {
+            "id": "c9",
+            "title": "International Software Testing Quality Board",
+            "details": "ISTQB Certified",
+            "certId": "-",
+            "file": ""
+          }
+        ]
+      },
+      {
+        "id": "ibm",
+        "name": "IBM",
+        "items": [
+          {
+            "id": "c17",
+            "title": "IBM Big Data Foundation Level 2",
+            "details": "",
+            "certId": "-",
+            "file": "/Certifications/IBM big data foundation level 2.pdf"
+          },
+          {
+            "id": "c10",
+            "title": "IBM Big Data Foundation Level 1",
+            "details": "",
+            "certId": "-",
+            "file": "/Certifications/IBM big data foundation level 1.pdf"
+          },
+          {
+            "id": "c11",
+            "title": "IBM Hadoop Foundation",
+            "details": "",
+            "certId": "-",
+            "file": "/Certifications/IBM HADOOP FOUNDATION.pdf"
+          }
+        ]
+      },
+      {
+        "id": "nvidia",
+        "name": "NVIDIA",
+        "items": [
+          {
+            "id": "c12",
+            "title": "NVIDIA Fundamentals of Deep Learning",
+            "details": "",
+            "certId": "-",
+            "file": ""
+          }
+        ]
+      },
+      {
+        "id": "nptel",
+        "name": "NPTEL",
+        "items": [
+          {
+            "id": "c18",
+            "title": "NPTEL Star QC Expert 2021",
+            "details": "SWAYAM-NPTEL, IIT Madras",
+            "certId": "-",
+            "file": "/Certifications/STAR QC Expert.jpg"
+          },
+          {
+            "id": "c13",
+            "title": "NPTEL Elite Certifications (Cloud, Big Data, Ethical Hacking)",
+            "details": "",
+            "certId": "-",
+            "file": ""
+          }
+        ]
+      },
+      {
+        "id": "cisco",
+        "name": "Cisco",
+        "items": [
+          {
+            "id": "c19",
+            "title": "Cisco IT Essentials",
+            "details": "Cisco Networking Academy",
+            "certId": "-",
+            "file": "/Certifications/ITEssentialsUpdate20260927-20-wcleno.pdf"
+          },
+          {
+            "id": "c20",
+            "title": "CCNA Routing and Switching: Routing and Switching Essentials",
+            "details": "Cisco Networking Academy",
+            "certId": "-",
+            "file": "/Certifications/1609694341190.jpg"
+          }
+        ]
+      },
+      {
+        "id": "blueprism",
+        "name": "Blue Prism",
+        "items": [
+          {
+            "id": "c21",
+            "title": "Blue Prism Associate Developer Educator",
+            "details": "Blue Prism",
+            "certId": "-",
+            "file": "/Certifications/BluePrism Associate Developer Educator.png"
+          },
+          {
+            "id": "c22",
+            "title": "RPA Blue Prism",
+            "details": "Blue Prism",
+            "certId": "-",
+            "file": "/Certifications/RPA BluPrism.png"
+          }
+        ]
+      }
+    ]
+  },
   "professionalActivities": {
     "editorial": [
       {
@@ -743,178 +892,58 @@
         "id": "rev12",
         "journal": "Int. Journal of Computer Theory and Engineering"
       }
-    ],
-    "memberships": [
-      {
-        "id": "mem1",
-        "organization": "IEEE",
-        "membershipId": "Senior Member: 92593454"
-      },
-      {
-        "id": "mem2",
-        "organization": "IAENG",
-        "membershipId": "Member: 135433"
-      },
-      {
-        "id": "mem3",
-        "organization": "ISTE",
-        "membershipId": "Lifetime: 126884"
-      },
-      {
-        "id": "mem4",
-        "organization": "CSTA",
-        "membershipId": "Member: 198358021419"
-      },
-      {
-        "id": "mem5",
-        "organization": "SPSC Ambassador",
-        "membershipId": "Sustainability Promoters"
-      }
-    ],
-    "conferenceAssociations": [
-      {
-        "id": "ca1",
-        "journal": "Springer LNNS (Lecture Notes in Networks and Systems)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca2",
-        "journal": "Springer SIST (Smart Innovation, Systems and Technologies)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca3",
-        "journal": "IEEE I2CT (International Conference on Convergence to Digital World)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca4",
-        "journal": "IEEE ICCCSP (International Conference on Computer, Communication, and Signal Processing)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca5",
-        "journal": "IEEE ICACCS (International Conference on Advanced Computing and Communication Systems)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca6",
-        "journal": "Springer LNEE (Lecture Notes in Electrical Engineering)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca7",
-        "journal": "BookRivers",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca8",
-        "journal": "IEEE ICCDW (International Conference on Convergence to Digital World)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca9",
-        "journal": "IEEE ic-ETITE (International Conference on Emerging Trends in Information Technology and Engineering)",
-        "role": "Author / Contributor"
-      },
-      {
-        "id": "ca10",
-        "journal": "IEEE ICSCET (International Conference on Smart Computing and Electronic Enterprise)",
-        "role": "Author / Contributor"
-      }
-    ],
-    "journalAssociations": [
-      {
-        "id": "rev1",
-        "journal": "Elsevier Computers & Security"
-      },
-      {
-        "id": "rev2",
-        "journal": "Elsevier Computer Networks"
-      },
-      {
-        "id": "rev3",
-        "journal": "Elsevier Computer Standards & Interfaces"
-      },
-      {
-        "id": "rev4",
-        "journal": "Elsevier Journal of Information Security and Applications"
-      },
-      {
-        "id": "rev5",
-        "journal": "Springer SN Computer Science"
-      },
-      {
-        "id": "rev6",
-        "journal": "Elsevier Engineering Applications of AI"
-      },
-      {
-        "id": "rev7",
-        "journal": "Springer Cybersecurity"
-      },
-      {
-        "id": "rev8",
-        "journal": "Springer Evolving Systems"
-      },
-      {
-        "id": "rev9",
-        "journal": "Journal of Computers, Materials & Continua"
-      },
-      {
-        "id": "rev10",
-        "journal": "Int. Journal of Information and Education Technology"
-      },
-      {
-        "id": "rev11",
-        "journal": "Journal of Advances in Information Technology"
-      },
-      {
-        "id": "rev12",
-        "journal": "Int. Journal of Computer Theory and Engineering"
-      }
-    ],
-    "leadership": [
-      "Undergraduate Project Coordinator – IT Department",
-      "NBA Accreditation Criteria 7 Incharge",
-      "NPTEL Local Chapter SPOC",
-      "Mentor and Evaluator – Smart India Hackathon",
-      "Faculty Coordinator – DevOps Club & APSIT Red Hat Academy",
-      "Organizer – Internal Hackathons and Technical Events",
-      "Session Chair for international conferences"
     ]
   },
   "invitedTalks": {
-    "fdps": [
+    "categories": [
       {
-        "id": "talk1",
-        "title": "Deployment and Workflow Automation",
-        "venue": "CRCE Bandra",
-        "type": "ISTE Approved STTP"
-      }
-    ],
-    "webinars": [],
-    "technicalLectures": [
-      {
-        "id": "talk2",
-        "title": "Strategic Mapping of Engineering Projects to SDG Using Emerging Approaches",
-        "venue": "PVPPCOE, Sion",
-        "type": "Expert Talk"
+        "id": "fdps",
+        "name": "FDPs",
+        "items": [
+          {
+            "id": "talk1",
+            "title": "Deployment and Workflow Automation",
+            "venue": "CRCE Bandra",
+            "type": "ISTE Approved STTP"
+          }
+        ]
       },
       {
-        "id": "talk3",
-        "title": "Cloud Security and Career Opportunities in Cloud Computing",
-        "venue": "VIT Pune & CSI Pune Chapter",
-        "type": "Expert Talk",
-        "year": "Oct 2024"
+        "id": "webinars",
+        "name": "Webinars",
+        "items": []
       },
       {
-        "id": "talk4",
-        "title": "Cloud Computing, DevOps, Linux, LaTeX",
-        "venue": "Multiple Institutions",
-        "type": "Expert Talks"
+        "id": "technicalLectures",
+        "name": "Technical Lectures",
+        "items": [
+          {
+            "id": "talk2",
+            "title": "Strategic Mapping of Engineering Projects to SDG Using Emerging Approaches",
+            "venue": "PVPPCOE, Sion",
+            "type": "Expert Talk"
+          },
+          {
+            "id": "talk4",
+            "title": "Cloud Computing, DevOps, Linux, LaTeX",
+            "venue": "Multiple Institutions",
+            "type": "Expert Talks"
+          },
+          {
+            "id": "talk3",
+            "title": "Cloud Security and Career Opportunities in Cloud Computing",
+            "venue": "VIT Pune & CSI Pune Chapter",
+            "type": "Expert Talk",
+            "year": "Oct 2024"
+          }
+        ]
+      },
+      {
+        "id": "conferenceInvitedTalks",
+        "name": "Conference Invited Talks",
+        "items": []
       }
-    ],
-    "conferenceInvitedTalks": []
+    ]
   },
   "fundedProjects": [
     {
@@ -927,21 +956,66 @@
     }
   ],
   "ugProjectsGuided": [
-    "AssetIQ: AI Enabled Framework for Asset Management of Educational Institute",
-    "RiskVision: AI-Based Web Platform for Financial Risk Assessment",
-    "ProjectSpace: Web Framework using Genetic Algorithms and ML",
-    "VSecureSphere: Virtual Lab for Simulating Cyber Attacks Patterns",
-    "ChatApsit: Generative AI Web Framework for Educational Institute",
-    "Varistha Rakshak: AI-based Framework for Senior Citizen Care",
-    "Automation of Supply Chain Management for Healthcare",
-    "AI Based Smart Online Examination Framework",
-    "AI based Security Orchestration, Automation & Response System",
-    "Autonetics and Administration for IT Laboratories",
-    "Automation in Uniform Faculty Appraisal System",
-    "ML Enabled Surveillance System for Societies",
-    "Artificial Intelligence based Self-Driving Car",
-    "AI Based Smart UAV",
-    "IoT Enabled Smart Lab"
+    {
+      "id": "ug1",
+      "title": "AssetIQ: AI Enabled Framework for Asset Management of Educational Institute"
+    },
+    {
+      "id": "ug2",
+      "title": "RiskVision: AI-Based Web Platform for Financial Risk Assessment"
+    },
+    {
+      "id": "ug3",
+      "title": "ProjectSpace: Web Framework using Genetic Algorithms and ML"
+    },
+    {
+      "id": "ug4",
+      "title": "VSecureSphere: Virtual Lab for Simulating Cyber Attacks Patterns"
+    },
+    {
+      "id": "ug5",
+      "title": "ChatApsit: Generative AI Web Framework for Educational Institute"
+    },
+    {
+      "id": "ug6",
+      "title": "Varistha Rakshak: AI-based Framework for Senior Citizen Care"
+    },
+    {
+      "id": "ug7",
+      "title": "Automation of Supply Chain Management for Healthcare"
+    },
+    {
+      "id": "ug8",
+      "title": "AI Based Smart Online Examination Framework"
+    },
+    {
+      "id": "ug9",
+      "title": "AI based Security Orchestration, Automation & Response System"
+    },
+    {
+      "id": "ug10",
+      "title": "Autonetics and Administration for IT Laboratories"
+    },
+    {
+      "id": "ug11",
+      "title": "Automation in Uniform Faculty Appraisal System"
+    },
+    {
+      "id": "ug12",
+      "title": "ML Enabled Surveillance System for Societies"
+    },
+    {
+      "id": "ug13",
+      "title": "Artificial Intelligence based Self-Driving Car"
+    },
+    {
+      "id": "ug14",
+      "title": "AI Based Smart UAV"
+    },
+    {
+      "id": "ug15",
+      "title": "IoT Enabled Smart Lab"
+    }
   ],
   "gallery": [
     {
@@ -1043,5 +1117,604 @@
       "year": "",
       "description": "Selected Reviewer for Computer Science Standards Revision by CSTA, USA."
     }
-  ]
+  ],
+  "sectionTitles": {
+    "home": {
+      "label": "Home",
+      "heading": ""
+    },
+    "about": {
+      "label": "About Me",
+      "heading": "About Me"
+    },
+    "education": {
+      "label": "Qualification",
+      "heading": "Qualification"
+    },
+    "experience": {
+      "label": "Experience",
+      "heading": "Experience"
+    },
+    "skills": {
+      "label": "Key Skills",
+      "heading": "Key Skills"
+    },
+    "certifications": {
+      "label": "Certifications & Badges",
+      "heading": "Certifications and Badges Earned"
+    },
+    "achievements": {
+      "label": "Achievements",
+      "heading": "Achievements"
+    },
+    "publications": {
+      "label": "Research",
+      "heading": "Research & Publications"
+    },
+    "patents": {
+      "label": "Intellectual Property",
+      "heading": "Patents & Copyrights"
+    },
+    "awards": {
+      "label": "Awards & Recognition",
+      "heading": "Awards & Achievements"
+    },
+    "associations": {
+      "label": "Associations",
+      "heading": "Associations & Memberships"
+    },
+    "activities": {
+      "label": "Professional Activities",
+      "heading": "Professional Activities"
+    },
+    "invitedTalks": {
+      "label": "Invited Talks",
+      "heading": "Invited Talks"
+    },
+    "gallery": {
+      "label": "Gallery",
+      "heading": "Photo Gallery"
+    },
+    "contact": {
+      "label": "Contact Me",
+      "heading": "Contact Me"
+    },
+    "recentNews": {
+      "label": "Recent News",
+      "heading": "Recent News"
+    }
+  },
+  "skills": [
+    {
+      "id": "skill1",
+      "name": "Cyber Security & Network Security",
+      "percent": 90
+    },
+    {
+      "id": "skill2",
+      "name": "Artificial Intelligence & Machine Learning",
+      "percent": 85
+    },
+    {
+      "id": "skill3",
+      "name": "Cloud Computing (AWS, Azure, Oracle)",
+      "percent": 88
+    },
+    {
+      "id": "skill4",
+      "name": "DevOps & Automation",
+      "percent": 92
+    },
+    {
+      "id": "skill5",
+      "name": "Linux & Open-Source Technologies",
+      "percent": 95
+    },
+    {
+      "id": "skill6",
+      "name": "Research & Academic Writing",
+      "percent": 90
+    },
+    {
+      "id": "skill7",
+      "name": "Big Data Analytics",
+      "percent": 80
+    },
+    {
+      "id": "skill8",
+      "name": "Teaching & Mentoring",
+      "percent": 95
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach1",
+      "value": "24",
+      "label": "Research Papers"
+    },
+    {
+      "id": "ach2",
+      "value": "200+",
+      "label": "Citations"
+    },
+    {
+      "id": "ach3",
+      "value": "2",
+      "label": "Patents"
+    },
+    {
+      "id": "ach4",
+      "value": "2",
+      "label": "Books"
+    },
+    {
+      "id": "ach5",
+      "value": "5",
+      "label": "Copyrights"
+    }
+  ],
+  "badges": [
+    {
+      "id": "badge1",
+      "src": "/Badges/1597434413295.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge2",
+      "src": "/Badges/1597671709431.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge3",
+      "src": "/Badges/1598523855914.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge4",
+      "src": "/Badges/1598968301190.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge5",
+      "src": "/Badges/1599190180576.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge6",
+      "src": "/Badges/1601656461736.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge7",
+      "src": "/Badges/1601736125871.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge8",
+      "src": "/Badges/1610214771061.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge9",
+      "src": "/Badges/1610214799616.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge10",
+      "src": "/Badges/1624097673677.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge11",
+      "src": "/Badges/1624097702758.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge12",
+      "src": "/Badges/1630427108992.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge13",
+      "src": "/Badges/1693642645579.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge14",
+      "src": "/Badges/1695725497772.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge15",
+      "src": "/Badges/1695744967030.jpg",
+      "title": ""
+    },
+    {
+      "id": "badge16",
+      "src": "/Badges/2024-red-hat-academy-learning-community.png",
+      "title": "2024 Red Hat Academy Learning Community"
+    },
+    {
+      "id": "badge17",
+      "src": "/Badges/2026-red-hat-academy-program-educator.png",
+      "title": "2026 Red Hat Academy Program Educator"
+    },
+    {
+      "id": "badge18",
+      "src": "/Badges/big-data-foundations-level-1.png",
+      "title": "Big Data Foundations Level 1"
+    },
+    {
+      "id": "badge19",
+      "src": "/Badges/big-data-foundations-level-2.png",
+      "title": "Big Data Foundations Level 2"
+    },
+    {
+      "id": "badge20",
+      "src": "/Badges/docker-essentials-a-developer-introduction.png",
+      "title": "Docker Essentials A Developer Introduction"
+    },
+    {
+      "id": "badge21",
+      "src": "/Badges/hadoop-foundations-level-1.png",
+      "title": "Hadoop Foundations Level 1"
+    },
+    {
+      "id": "badge22",
+      "src": "/Badges/it-essentials.png",
+      "title": "It Essentials"
+    },
+    {
+      "id": "badge23",
+      "src": "/Badges/microsoft-certified-azure-fundamentals.png",
+      "title": "Microsoft Certified Azure Fundamentals"
+    },
+    {
+      "id": "badge24",
+      "src": "/Badges/red-hat-learning-community-ambassador (1).png",
+      "title": "Red Hat Learning Community Ambassador"
+    }
+  ],
+  "associations": {
+    "categories": [
+      {
+        "id": "journal",
+        "name": "Journal Associations",
+        "items": [
+          {
+            "id": "ja1",
+            "title": "Elsevier Computers & Security",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja2",
+            "title": "Elsevier Computer Networks",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja3",
+            "title": "Elsevier Computer Standards & Interfaces",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja4",
+            "title": "Elsevier Journal of Information Security and Applications",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja5",
+            "title": "Springer SN Computer Science",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja6",
+            "title": "Elsevier Engineering Applications of AI",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja7",
+            "title": "Springer Cybersecurity",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja8",
+            "title": "Springer Evolving Systems",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja9",
+            "title": "Journal of Computers, Materials & Continua",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja10",
+            "title": "Int. Journal of Information and Education Technology",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja11",
+            "title": "Journal of Advances in Information Technology",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ja12",
+            "title": "Int. Journal of Computer Theory and Engineering",
+            "subtitle": "",
+            "file": ""
+          }
+        ]
+      },
+      {
+        "id": "conference",
+        "name": "Conference Associations",
+        "items": [
+          {
+            "id": "ca1",
+            "title": "Springer LNNS (Lecture Notes in Networks and Systems)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca2",
+            "title": "Springer SIST (Smart Innovation, Systems and Technologies)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca3",
+            "title": "IEEE I2CT (International Conference on Convergence to Digital World)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca4",
+            "title": "IEEE ICCCSP (International Conference on Computer, Communication, and Signal Processing)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca5",
+            "title": "IEEE ICACCS (International Conference on Advanced Computing and Communication Systems)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca6",
+            "title": "Springer LNEE (Lecture Notes in Electrical Engineering)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca7",
+            "title": "BookRivers",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca8",
+            "title": "IEEE ICCDW (International Conference on Convergence to Digital World)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca9",
+            "title": "IEEE ic-ETITE (International Conference on Emerging Trends in Information Technology and Engineering)",
+            "subtitle": "",
+            "file": ""
+          },
+          {
+            "id": "ca10",
+            "title": "IEEE ICSCET (International Conference on Smart Computing and Electronic Enterprise)",
+            "subtitle": "",
+            "file": ""
+          }
+        ]
+      },
+      {
+        "id": "memberships",
+        "name": "Memberships",
+        "items": [
+          {
+            "id": "mem1",
+            "title": "IEEE",
+            "subtitle": "Senior Member: 92593454",
+            "file": "/Associations/IEEE Senior Member.pdf"
+          },
+          {
+            "id": "mem2",
+            "title": "IAENG",
+            "subtitle": "Member: 135433",
+            "file": ""
+          },
+          {
+            "id": "mem3",
+            "title": "ISTE",
+            "subtitle": "Lifetime: 126884",
+            "file": ""
+          },
+          {
+            "id": "mem4",
+            "title": "CSTA",
+            "subtitle": "Member: 198358021419",
+            "file": "/Associations/CSTA Standard Reviewer.jpg"
+          },
+          {
+            "id": "mem5",
+            "title": "SPSC Ambassador",
+            "subtitle": "Sustainability Promoters",
+            "file": "/Associations/SPSC_IND26IACA00030432.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "activities": {
+    "categories": [
+      {
+        "id": "institutional",
+        "name": "Institutional Contributions",
+        "items": [
+          {
+            "id": "inst1",
+            "title": "IEEE Senior Member"
+          },
+          {
+            "id": "inst2",
+            "title": "Undergraduate Project Coordinator – IT Department"
+          },
+          {
+            "id": "inst3",
+            "title": "NBA Accreditation Criteria 7 Incharge"
+          },
+          {
+            "id": "inst4",
+            "title": "NPTEL Local Chapter SPOC"
+          },
+          {
+            "id": "inst5",
+            "title": "Mentor and Evaluator – Smart India Hackathon"
+          },
+          {
+            "id": "inst6",
+            "title": "Faculty coordinator for DevOps Club and APSIT Red Hat Academy"
+          },
+          {
+            "id": "inst7",
+            "title": "Organizer – Internal Hackathons and Technical Events"
+          },
+          {
+            "id": "inst8",
+            "title": "Actively Contributed in Institutional and Departmental Development Activities."
+          },
+          {
+            "id": "inst9",
+            "title": "Served as Session Chair for reputed international conferences, contributing to the academic peer-review process."
+          }
+        ]
+      },
+      {
+        "id": "university",
+        "name": "University Level Responsibilities",
+        "items": [
+          {
+            "id": "univ1",
+            "title": "Paper setting for Mumbai University for multiple subjects in the year 2024, 2025, 2026."
+          },
+          {
+            "id": "univ2",
+            "title": "Mentor for University Level Research Project Competition for the students MU Avishkar-2022, 2024 and 2025."
+          },
+          {
+            "id": "univ3",
+            "title": "External Examiner and Evaluator for Mumbai University Engineering Examination for multiple subjects like Cloud Computing & Services, Big Data Analytics, CNS, etc."
+          }
+        ]
+      }
+    ]
+  },
+  "contactLinks": [
+    {
+      "id": "cl1",
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/vishalbadgujar/",
+      "icon": "linkedin",
+      "color": "#0A66C2"
+    },
+    {
+      "id": "cl2",
+      "name": "WhatsApp",
+      "url": "https://wa.me/917709933639",
+      "icon": "whatsapp",
+      "color": "#25D366"
+    },
+    {
+      "id": "cl3",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/channel/UCEiZ4U0rR9S44pFM3aweA8w",
+      "icon": "youtube",
+      "color": "#FF0000"
+    },
+    {
+      "id": "cl4",
+      "name": "Google Scholar",
+      "url": "https://scholar.google.co.in/citations?hl=en&pli=1&user=CHbeaF0AAAAJ",
+      "icon": "google-scholar",
+      "color": "#4285F4"
+    },
+    {
+      "id": "cl5",
+      "name": "Scopus",
+      "url": "https://www.scopus.com/authid/detail.uri?authorId=57205288144",
+      "icon": "scopus",
+      "color": "#E9711C"
+    },
+    {
+      "id": "cl6",
+      "name": "ORCID ID",
+      "url": "https://orcid.org/0000-0002-8265-4168",
+      "icon": "orcid",
+      "color": "#A6CE39"
+    },
+    {
+      "id": "cl7",
+      "name": "Web of Science",
+      "url": "https://www.webofscience.com/wos/author/record/L-7930-2018",
+      "icon": "wos",
+      "color": "#5C2D91"
+    },
+    {
+      "id": "cl8",
+      "name": "Semantics Scholar",
+      "url": "https://www.semanticscholar.org/author/V.-Badgujar/52053006",
+      "icon": "globe",
+      "color": "#4b3e99"
+    },
+    {
+      "id": "cl9",
+      "name": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Vishal-Badgujar-2",
+      "icon": "globe",
+      "color": "#00ccbb"
+    },
+    {
+      "id": "cl10",
+      "name": "Vidwan ID",
+      "url": "https://vidwan.inflibnet.ac.in/profile/379828",
+      "icon": "vidwan",
+      "color": "#0077B6"
+    },
+    {
+      "id": "cl11",
+      "name": "Research ID",
+      "url": "https://researchid.co/vsbadgujar",
+      "icon": "globe",
+      "color": "#333333"
+    },
+    {
+      "id": "cl12",
+      "name": "OpenReview ID",
+      "url": "https://openreview.net/profile?id=~Vishal_Sahebrao_Badgujar1",
+      "icon": "globe",
+      "color": "#8c1b13"
+    },
+    {
+      "id": "cl13",
+      "name": "Technical Blog",
+      "url": "https://vishtech4u.blogspot.com/",
+      "icon": "globe",
+      "color": "#f57c00"
+    }
+  ],
+  "recentNews": []
 }

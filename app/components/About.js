@@ -1,5 +1,5 @@
 'use client';
-import { useData } from './DataProvider';
+import { useData, sectionHeading } from './DataProvider';
 import { Icons } from './Icons';
 
 export default function About() {
@@ -18,7 +18,7 @@ export default function About() {
       <section className="section section-white">
         <div className="section-title-wrapper">
           <span className="section-bg-text">ABOUT ME</span>
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title">{sectionHeading(d, 'about', 'About Me')}</h2>
         </div>
 
         <div style={{ maxWidth: '800px', margin: '0 auto 40px' }}>

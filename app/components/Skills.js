@@ -1,16 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-
-const SKILLS = [
-  { name: 'Cyber Security & Network Security', percent: 90 },
-  { name: 'Artificial Intelligence & Machine Learning', percent: 85 },
-  { name: 'Cloud Computing (AWS, Azure, Oracle)', percent: 88 },
-  { name: 'DevOps & Automation', percent: 92 },
-  { name: 'Linux & Open-Source Technologies', percent: 95 },
-  { name: 'Research & Academic Writing', percent: 90 },
-  { name: 'Big Data Analytics', percent: 80 },
-  { name: 'Teaching & Mentoring', percent: 95 },
-];
+import { useData, sectionHeading } from './DataProvider';
 
 function SkillBar({ name, percent }) {
   const [width, setWidth] = useState(0);
@@ -43,17 +33,18 @@ function SkillBar({ name, percent }) {
 }
 
 export default function Skills() {
+  const d = useData();
   return (
     <section className="section section-white">
       <div className="section-title-wrapper">
         <span className="section-bg-text">KEY SKILLS</span>
-        <h2 className="section-title">Key Skills</h2>
+        <h2 className="section-title">{sectionHeading(d, 'skills', 'Key Skills')}</h2>
         <p className="section-subtitle">Integrity and Perseverance</p>
       </div>
       <div style={{ maxWidth: '700px' }}>
         <div className="skills-section">
-          {SKILLS.map((s, i) => (
-            <SkillBar key={i} name={s.name} percent={s.percent} />
+          {(d.skills || []).map((s) => (
+            <SkillBar key={s.id} name={s.name} percent={Number(s.percent) || 0} />
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 'use client';
-import { useData } from './DataProvider';
+import { useData, sectionHeading } from './DataProvider';
 
 export default function Patents() {
   const d = useData();
@@ -8,7 +8,7 @@ export default function Patents() {
     <section className="section section-white">
       <div className="section-title-wrapper">
         <span className="section-bg-text">INTELLECTUAL PROPERTY</span>
-        <h2 className="section-title">Patents & Copyrights</h2>
+        <h2 className="section-title">{sectionHeading(d, 'patents', 'Patents & Copyrights')}</h2>
       </div>
 
       {/* Patents */}

@@ -1,5 +1,5 @@
 'use client';
-import { useData } from './DataProvider';
+import { useData, sectionHeading } from './DataProvider';
 import { useEffect, useRef, useState } from 'react';
 
 function Reveal({ children, delay = 0 }) {
@@ -143,10 +143,10 @@ export default function Awards() {
         return (
           <div className="certs-grid">
             {d.ugProjectsGuided.map((proj, i) => (
-              <Reveal key={i} delay={i * 50}>
+              <Reveal key={proj.id || i} delay={i * 50}>
                 <div className="cert-card" style={{ alignItems: 'center' }}>
                   <div className="cert-icon">🎯</div>
-                  <div><h4 className="cert-title" style={{ fontSize: '14px' }}>{proj}</h4></div>
+                  <div><h4 className="cert-title" style={{ fontSize: '14px' }}>{proj.title ?? proj}</h4></div>
                 </div>
               </Reveal>
             ))}
@@ -163,7 +163,7 @@ export default function Awards() {
         <Reveal>
           <div className="section-title-wrapper" style={{ marginTop: '0' }}>
             <span className="section-bg-text">AWARDS</span>
-            <h2 className="section-title">Awards & Achievements</h2>
+            <h2 className="section-title">{sectionHeading(d, 'awards', 'Awards & Achievements')}</h2>
           </div>
         </Reveal>
 

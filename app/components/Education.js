@@ -1,5 +1,5 @@
 'use client';
-import { useData } from './DataProvider';
+import { useData, sectionHeading } from './DataProvider';
 
 export default function Education() {
   const d = useData();
@@ -7,7 +7,7 @@ export default function Education() {
     <section className="section section-white">
       <div className="section-title-wrapper">
         <span className="section-bg-text">QUALIFICATION</span>
-        <h2 className="section-title">Qualification</h2>
+        <h2 className="section-title">{sectionHeading(d, 'education', 'Qualification')}</h2>
       </div>
       <div style={{ maxWidth: '750px' }}>
         <div className="timeline">

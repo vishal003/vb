@@ -15,6 +15,9 @@ import Associations from './components/Associations';
 import InvitedTalks from './components/InvitedTalks';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
+import ProfessionalActivities from './components/ProfessionalActivities';
+import RecentNews from './components/RecentNews';
+import { useData } from './components/DataProvider';
 import { Icons } from './components/Icons';
 
 const SECTIONS = [
@@ -29,12 +32,15 @@ const SECTIONS = [
   { id: 'patents', label: 'Intellectual Property', icon: Icons.patent },
   { id: 'awards', label: 'Awards & Recognition', icon: Icons.award },
   { id: 'associations', label: 'Associations', icon: Icons.handshake },
+  { id: 'activities', label: 'Professional Activities', icon: Icons.briefcase },
   { id: 'invitedTalks', label: 'Invited Talks', icon: Icons.award },
   { id: 'gallery', label: 'Gallery', icon: Icons.gallery },
   { id: 'contact', label: 'Contact Me', icon: Icons.contact },
+  { id: 'recentNews', label: 'Recent News', icon: Icons.news },
 ];
 
 export default function Home() {
+  const d = useData();
   const [activeTab, setActiveTab] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -105,9 +111,15 @@ export default function Home() {
         <div id="patents"><Patents /></div>
         <div id="awards"><Awards /></div>
         <div id="associations"><Associations /></div>
+        <div id="activities"><ProfessionalActivities /></div>
         <div id="invitedTalks"><InvitedTalks /></div>
         <div id="gallery"><Gallery /></div>
         <div id="contact"><Contact /></div>
+        <div id="recentNews"><RecentNews /></div>
+
+        <footer className="footer">
+          <p>© {new Date().getFullYear()} {d.personal.name}. All Rights Reserved.</p>
+        </footer>
       </main>
     </div>
   );

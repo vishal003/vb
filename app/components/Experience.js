@@ -1,5 +1,5 @@
 'use client';
-import { useData } from './DataProvider';
+import { useData, sectionHeading } from './DataProvider';
 
 export default function Experience() {
   const d = useData();
@@ -7,7 +7,7 @@ export default function Experience() {
     <section className="section section-white">
       <div className="section-title-wrapper">
         <span className="section-bg-text">EXPERIENCE</span>
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title">{sectionHeading(d, 'experience', 'Experience')}</h2>
         <p className="section-subtitle">Total Experience: {d.stats.yearsExperience}+ Years</p>
       </div>
       <div style={{ maxWidth: '750px' }}>

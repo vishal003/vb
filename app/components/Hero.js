@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useData } from './DataProvider';
+import { profilePhotoSrc, isUnoptimizedImage } from '@/lib/data';
 import { Icons } from './Icons';
 
 export default function Hero() {
@@ -15,7 +16,8 @@ export default function Hero() {
   useEffect(() => {
     if (texts.length === 0) return;
 
-    const currentText = texts[textIndex];
+    // The list can shrink while typing when edited from the admin panel
+    const currentText = texts[textIndex % texts.length] || '';
     let timeout;
 
     if (!isDeleting) {
@@ -47,9 +49,10 @@ export default function Hero() {
       <div className="hero-left-panel" style={{ width: '45%', display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center', padding: '20px' }}>
         <div className="hero-photo" style={{ width: '100%', height: '70vh', position: 'relative', overflow: 'hidden', borderRadius: '10px' }}>
           <Image
-            src={d.personal.photo}
+            src={profilePhotoSrc(d.personal.photo)}
             alt={d.personal.name}
             fill
+            unoptimized={isUnoptimizedImage(d.personal.photo)}
             sizes="45vw"
             style={{ objectFit: 'cover', objectPosition: 'center top' }}
             priority

@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { useData } from './DataProvider';
+import { useData, sectionHeading } from './DataProvider';
 
 function Reveal({ children, delay = 0 }) {
   const ref = useRef(null);
@@ -16,11 +16,8 @@ function Reveal({ children, delay = 0 }) {
 
 export default function Gallery() {
   const d = useData();
-  const [filter, setFilter] = useState('All');
   const [lightbox, setLightbox] = useState({ open: false, index: 0 });
-
-  const categories = ['All', ...new Set(d.gallery.map(g => g.category))];
-  const filtered = filter === 'All' ? d.gallery : d.gallery.filter(g => g.category === filter);
+  const filtered = d.gallery;
 
   const openLightbox = (i) => setLightbox({ open: true, index: i });
   const closeLightbox = () => setLightbox({ open: false, index: 0 });
@@ -58,32 +55,9 @@ export default function Gallery() {
     <section id="gallery" className="section section-white">
       <Reveal><div className="section-title-wrapper" style={{ marginTop: '0' }}>
         <span className="section-bg-text">GALLERY</span>
-        <h2 className="section-title">Photo Gallery</h2>
+        <h2 className="section-title">{sectionHeading(d, 'gallery', 'Photo Gallery')}</h2>
         <p className="section-subtitle">Moments from conferences, awards, events, and academic milestones.</p>
       </div></Reveal>
-
-      {/* Filter Buttons */}
-      <Reveal delay={100}>
-        <div className="gallery-filters">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              className={`gallery-filter-btn ${filter === cat ? 'active' : ''}`}
-              onClick={() => setFilter(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </Reveal>
-
-      {/* Image Count */}
-      <Reveal delay={150}>
-        <p style={{ textAlign: 'center', fontSize: '13px', color: 'var(--text-light)', marginBottom: '25px', letterSpacing: '1px', textTransform: 'uppercase' }}>
-          Showing {filtered.length} {filtered.length === 1 ? 'photo' : 'photos'}
-          {filter !== 'All' && ` in "${filter}"`}
-        </p>
-      </Reveal>
 
       {/* Gallery Grid */}
       <div className="gallery-masonry-grid">
@@ -107,8 +81,6 @@ export default function Gallery() {
                     <line x1="8" y1="11" x2="14" y2="11" />
                   </svg>
                 </div>
-                <div className="gallery-item-caption-text">{img.caption}</div>
-                <span className="gallery-item-category-badge">{img.category}</span>
               </div>
             </div>
           </Reveal>

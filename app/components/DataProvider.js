@@ -37,3 +37,8 @@ export function DataProvider({ children }) {
 export function useData() {
   return useContext(DataContext);
 }
+
+// Section heading as set in Admin → Section Names, with a fallback
+export function sectionHeading(d, id, fallback) {
+  return d.sectionTitles?.[id]?.heading || fallback;
+}
