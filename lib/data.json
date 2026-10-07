@@ -1075,40 +1075,31 @@
         ]
       },
       {
-        "id": "webinars",
-        "name": "Webinars",
+        "id": "technicalLectures",
+        "name": "Technical Expert Talks",
         "items": [
           {
-            "title": "Cloud Security and Career Opportunities in Cloud Computing",
-            "venue": "VIT Pune & CSI Pune Chapter",
-            "year": "Oct 2024",
-            "id": "invitedTalks_webinars_1789144656535_37rif"
-          }
-        ]
-      },
-      {
-        "id": "technicalLectures",
-        "name": "Technical Lectures",
-        "items": [
+            "title": "LaTeX",
+            "venue": "APSIT, Thane",
+            "type": "Expert Talk",
+            "year": "2026",
+            "id": "invitedTalks_categories_1_items_1791354516464_l2fc6"
+          },
           {
             "id": "talk2",
             "title": "Strategic Mapping of Engineering Projects to SDG Using Emerging Approaches",
             "venue": "PVPPCOE, Sion",
-            "type": "Expert Talk"
+            "type": "Expert Talk",
+            "year": "2026"
           },
           {
             "id": "talk3",
             "title": "Cloud Security and Career Opportunities in Cloud Computing",
-            "venue": "VIT Pune & CSI Pune Chapter",
-            "type": "Expert Talk",
+            "venue": "VIT Pune ",
+            "type": "CSI Pune Chapter Approved",
             "year": "Oct 2024"
           }
         ]
-      },
-      {
-        "id": "conferenceInvitedTalks",
-        "name": "Conference Invited Talks",
-        "items": []
       }
     ]
   },
