@@ -1060,6 +1060,13 @@
         "name": "FDPs",
         "items": [
           {
+            "title": "Modern Application Lifecycle: From Architecture to Cloud Deployment",
+            "venue": "APSIT, Thane",
+            "type": "ISTE & IEEE Approved FDP",
+            "year": "2026",
+            "id": "invitedTalks_categories_0_items_1791354077953_c1ifu"
+          },
+          {
             "id": "talk1",
             "title": "Deployment and Workflow Automation",
             "venue": "CRCE Bandra",
@@ -1539,7 +1546,7 @@
     "categories": [
       {
         "id": "journal",
-        "name": "Journal Associations",
+        "name": "Journal Associations (Reviewer)",
         "items": [
           {
             "id": "ja1",
@@ -1617,7 +1624,7 @@
       },
       {
         "id": "conference",
-        "name": "Conference Associations",
+        "name": "Conference Associations (Reviewer)",
         "items": [
           {
             "id": "ca1",
@@ -1683,7 +1690,7 @@
       },
       {
         "id": "memberships",
-        "name": "Memberships",
+        "name": "Professional Memberships",
         "items": [
           {
             "id": "mem1",
