@@ -2,8 +2,19 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useData } from './DataProvider';
-import { profilePhotoSrc, isUnoptimizedImage } from '@/lib/data';
+import { profilePhotoSrc, isUnoptimizedImage, resolveImageUrl } from '@/lib/data';
 import { Icons } from './Icons';
+
+// Convert a Google Drive share link to a direct download URL
+function resolveDriveDownloadUrl(link) {
+  if (!link) return link;
+  // If it's a drive link, extract the file ID and build a download URL
+  if (/drive\.google\.com/.test(link)) {
+    const id = link.match(/\/d\/([\w-]+)/)?.[1] || link.match(/[?&]id=([\w-]+)/)?.[1];
+    if (id) return `https://drive.google.com/uc?export=download&id=${id}`;
+  }
+  return link;
+}
 
 export default function Hero() {
   const d = useData();
@@ -44,6 +55,11 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex, texts]);
 
+  // Resolve document links - use data-driven links if available, otherwise fall back to static paths
+  const teachingLink = resolveDriveDownloadUrl(d.personal.teachingStatementLink) || '/cv/Teaching%20Statement.pdf';
+  const researchLink = resolveDriveDownloadUrl(d.personal.researchStatementLink) || '/cv/Research%20Statement.pdf';
+  const cvLink = resolveDriveDownloadUrl(d.personal.cvLink) || '/cv/Dr_Vishal_Badgujar_Academic_CV%20(3).pdf';
+
   return (
     <section className="hero-section animate-fade">
       <div className="hero-left-panel" style={{ width: '45%', display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center', padding: '20px' }}>
@@ -59,9 +75,9 @@ export default function Hero() {
           />
         </div>
         <div className="hero-photo-buttons" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', marginTop: '20px', flexWrap: 'wrap' }}>
-          <a href="/cv/Teaching%20Statement.pdf" download="Teaching_Statement.pdf" className="btn-statement" style={{ background: 'var(--accent-gradient)', color: 'white', padding: '10px', borderRadius: '8px', textAlign: 'center', fontWeight: '600', fontSize: '14px', flex: '1', minWidth: '120px', height: '64px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', boxShadow: 'var(--shadow-md)', textDecoration: 'none', lineHeight: '1.2', border: 'none' }}>Teaching<br/>Statement</a>
-          <a href="/cv/Research%20Statement.pdf" download="Research_Statement.pdf" className="btn-statement" style={{ background: 'var(--accent-gradient)', color: 'white', padding: '10px', borderRadius: '8px', textAlign: 'center', fontWeight: '600', fontSize: '14px', flex: '1', minWidth: '120px', height: '64px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', boxShadow: 'var(--shadow-md)', textDecoration: 'none', lineHeight: '1.2', border: 'none' }}>Research<br/>Statement</a>
-          <a href="/cv/Dr_Vishal_Badgujar_Academic_CV%20(3).pdf" download="Dr_Vishal_Badgujar_CV.pdf" className="btn-statement" style={{ background: 'var(--accent-gradient)', color: 'white', padding: '10px', borderRadius: '8px', textAlign: 'center', fontWeight: '600', fontSize: '14px', flex: '1', minWidth: '120px', height: '64px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', boxShadow: 'var(--shadow-md)', textDecoration: 'none', lineHeight: '1.2', border: 'none' }}>Curriculum<br/>Vitae</a>
+          <a href={teachingLink} target="_blank" rel="noopener noreferrer" download="Teaching_Statement.pdf" className="btn-statement" style={{ background: 'var(--accent-gradient)', color: 'white', padding: '10px', borderRadius: '8px', textAlign: 'center', fontWeight: '600', fontSize: '14px', flex: '1', minWidth: '120px', height: '64px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', boxShadow: 'var(--shadow-md)', textDecoration: 'none', lineHeight: '1.2', border: 'none' }}>Teaching<br/>Statement</a>
+          <a href={researchLink} target="_blank" rel="noopener noreferrer" download="Research_Statement.pdf" className="btn-statement" style={{ background: 'var(--accent-gradient)', color: 'white', padding: '10px', borderRadius: '8px', textAlign: 'center', fontWeight: '600', fontSize: '14px', flex: '1', minWidth: '120px', height: '64px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', boxShadow: 'var(--shadow-md)', textDecoration: 'none', lineHeight: '1.2', border: 'none' }}>Research<br/>Statement</a>
+          <a href={cvLink} target="_blank" rel="noopener noreferrer" download="Dr_Vishal_Badgujar_CV.pdf" className="btn-statement" style={{ background: 'var(--accent-gradient)', color: 'white', padding: '10px', borderRadius: '8px', textAlign: 'center', fontWeight: '600', fontSize: '14px', flex: '1', minWidth: '120px', height: '64px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', boxShadow: 'var(--shadow-md)', textDecoration: 'none', lineHeight: '1.2', border: 'none' }}>Curriculum<br/>Vitae</a>
         </div>
       </div>
 

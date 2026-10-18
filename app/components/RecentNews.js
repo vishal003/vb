@@ -1,5 +1,6 @@
 'use client';
 import { useData, sectionHeading } from './DataProvider';
+import { resolveImageUrl } from '@/lib/data';
 
 export default function RecentNews() {
   const d = useData();
@@ -18,8 +19,15 @@ export default function RecentNews() {
         <div className="news-list">
           {news.map((n) => (
             <article className="news-item" key={n.id}>
-              <h4>{n.title}</h4>
-              {n.description && <p>{n.description}</p>}
+              {n.image && (
+                <div className="news-item-image">
+                  <img src={resolveImageUrl(n.image)} alt={n.title} loading="lazy" />
+                </div>
+              )}
+              <div className="news-item-content">
+                <h4>{n.title}</h4>
+                {n.description && <p>{n.description}</p>}
+              </div>
             </article>
           ))}
         </div>

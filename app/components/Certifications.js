@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useData, sectionHeading } from './DataProvider';
 import CategoryTabs, { useActiveCategory } from './CategoryTabs';
 import FileViewer from './FileViewer';
+import { resolveImageUrl } from '@/lib/data';
 
 // Category-specific SVG icons (keyed by category id so renaming a category keeps its icon)
 const ISSUER_ICONS = {
@@ -80,7 +81,7 @@ function getCertColor(categoryId) {
   return ISSUER_COLORS[categoryId] || 'var(--accent)';
 }
 
-// Auto-sliding badge strip: moves one badge right-to-left every 3s, loops forever
+// Auto-sliding badge strip with manual arrow controls
 function BadgeSlider({ badges }) {
   const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(true);
@@ -88,7 +89,7 @@ function BadgeSlider({ badges }) {
 
   useEffect(() => {
     if (paused || badges.length < 2) return;
-    const t = setInterval(() => { setAnimate(true); setIndex(i => i + 1); }, 3000);
+    const t = setInterval(() => { setAnimate(true); setIndex(i => i + 1); }, 1500);
     return () => clearInterval(t);
   }, [paused, badges.length]);
 
@@ -97,21 +98,43 @@ function BadgeSlider({ badges }) {
     if (index >= badges.length) { setAnimate(false); setIndex(0); }
   };
 
+  const goPrev = () => {
+    setAnimate(true);
+    setIndex(i => (i - 1 + badges.length) % badges.length);
+  };
+
+  const goNext = () => {
+    setAnimate(true);
+    setIndex(i => i + 1);
+  };
+
   if (badges.length === 0) return null;
 
   return (
-    <div className="badge-slider" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      <div
-        className="badge-track"
-        style={{ '--idx': index, transition: animate ? undefined : 'none' }}
-        onTransitionEnd={onTransitionEnd}
-      >
-        {[...badges, ...badges].map((b, i) => (
-          <div className="badge-slide" key={`${b.id}-${i}`} aria-hidden={i >= badges.length}>
-            <img src={encodeURI(b.src)} alt={b.title || 'Badge'} title={b.title} loading="lazy" />
-          </div>
-        ))}
+    <div className="badge-slider-wrapper" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      <button className="badge-arrow badge-arrow-left" onClick={goPrev} aria-label="Previous badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <div className="badge-slider">
+        <div
+          className="badge-track"
+          style={{ '--idx': index, transition: animate ? undefined : 'none' }}
+          onTransitionEnd={onTransitionEnd}
+        >
+          {[...badges, ...badges].map((b, i) => (
+            <div className="badge-slide" key={`${b.id}-${i}`} aria-hidden={i >= badges.length}>
+              <img src={resolveImageUrl(b.src)} alt={b.title || 'Badge'} title={b.title} loading="lazy" />
+            </div>
+          ))}
+        </div>
       </div>
+      <button className="badge-arrow badge-arrow-right" onClick={goNext} aria-label="Next badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
     </div>
   );
 }

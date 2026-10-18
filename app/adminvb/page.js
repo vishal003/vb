@@ -507,6 +507,24 @@ export default function AdminPanel() {
               <label>OBJECTIVE</label>
               <textarea value={data.personal.objective || ''} onChange={e => handlePersonalChange('objective', e.target.value)} rows={3} />
             </div>
+
+            <h4 style={{ color: '#e8b84d', margin: '32px 0 16px' }}>📄 Document Links (Google Drive)</h4>
+            <p style={{ color: '#6b7394', fontSize: '13px', marginBottom: '16px' }}>Paste Google Drive share links below. Set the file to "Anyone with the link can view" on Drive. Clicking the buttons on the website will download the latest version.</p>
+            <div className="admin-grid">
+              <div className="admin-field">
+                <label>TEACHING STATEMENT (Drive Link)</label>
+                <input value={data.personal.teachingStatementLink || ''} onChange={e => handlePersonalChange('teachingStatementLink', e.target.value)} placeholder="https://drive.google.com/file/d/…/view" />
+              </div>
+              <div className="admin-field">
+                <label>RESEARCH STATEMENT (Drive Link)</label>
+                <input value={data.personal.researchStatementLink || ''} onChange={e => handlePersonalChange('researchStatementLink', e.target.value)} placeholder="https://drive.google.com/file/d/…/view" />
+              </div>
+              <div className="admin-field" style={{ gridColumn: '1 / -1' }}>
+                <label>CURRICULUM VITAE (Drive Link)</label>
+                <input value={data.personal.cvLink || ''} onChange={e => handlePersonalChange('cvLink', e.target.value)} placeholder="https://drive.google.com/file/d/…/view" />
+              </div>
+            </div>
+
             {renderStringList('personal.typingTexts', 'Typewriter Texts on Home ("I\'am …")', 'e.g. Cyber Security Researcher')}
           </>
         )}
@@ -731,11 +749,11 @@ export default function AdminPanel() {
         {activeTab === 'gallery' && (
           <>
             <h3>🖼️ Gallery</h3>
-            <p>Manage gallery images. Place image files in <code>/public/images/gallery/</code></p>
+            <p>Manage gallery images. You can use local paths (e.g. <code>/images/gallery/img1.jpg</code>) or <strong>Google Drive share links</strong>. For Drive links, set the file to "Anyone with the link can view", then paste the share link.</p>
             {renderArrayEditor('gallery', data.gallery, [
-              { key: 'src', label: 'Image Path (e.g. /images/gallery/img1.jpg)', type: 'file' },
+              { key: 'src', label: 'Image Path or Google Drive Link', type: 'file' },
               { key: 'caption', label: 'Caption' },
-            ], { src: '/images/gallery/', caption: '' })}
+            ], { src: '', caption: '' })}
           </>
         )}
 
@@ -767,11 +785,12 @@ export default function AdminPanel() {
         {activeTab === 'news' && (
           <>
             <h3>📰 Recent News</h3>
-            <p>Shown in the Recent News section at the end of the website. Latest news goes on top.</p>
+            <p>Shown in the Recent News section at the end of the website. Latest news goes on top. You can add an optional image using a Google Drive share link.</p>
             {renderArrayEditor('recentNews', data.recentNews || [], [
               { key: 'title', label: 'Title' },
               { key: 'description', label: 'Description', type: 'textarea' },
-            ], { title: '', description: '' })}
+              { key: 'image', label: 'Image Link (Google Drive or direct URL, optional)', type: 'file' },
+            ], { title: '', description: '', image: '' })}
           </>
         )}
 

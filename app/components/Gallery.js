@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useData, sectionHeading } from './DataProvider';
+import { resolveImageUrl } from '@/lib/data';
 
 function Reveal({ children, delay = 0 }) {
   const ref = useRef(null);
@@ -68,7 +69,7 @@ export default function Gallery() {
               onClick={() => openLightbox(i)}
             >
               <img
-                src={img.src}
+                src={resolveImageUrl(img.src)}
                 alt={img.caption}
                 loading="lazy"
               />
@@ -94,7 +95,7 @@ export default function Gallery() {
           <button className="lightbox-btn lightbox-prev" onClick={(e) => { e.stopPropagation(); prevImage(); }}>‹</button>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <img
-              src={filtered[lightbox.index].src}
+              src={resolveImageUrl(filtered[lightbox.index].src)}
               alt={filtered[lightbox.index].caption}
             />
             <div className="lightbox-caption">
