@@ -52,18 +52,19 @@ const CERT_FIELDS = [
   { key: 'title', label: 'Certificate Title' },
   { key: 'details', label: 'Details' },
   { key: 'certId', label: 'Certificate ID' },
-  { key: 'file', label: 'Certificate File (e.g. /Certifications/my-cert.pdf)', type: 'file' },
+  { key: 'file', label: 'Certificate Link (Google Drive share link or /path, optional)', type: 'file' },
 ];
 const ASSOCIATION_FIELDS = [
   { key: 'title', label: 'Name (Journal / Conference / Organization)' },
   { key: 'subtitle', label: 'Membership ID / Role (optional)' },
-  { key: 'file', label: 'Certificate File (e.g. /Associations/my-cert.pdf)', type: 'file' },
+  { key: 'file', label: 'Certificate Link (Google Drive share link or /path, optional)', type: 'file' },
 ];
 const TALK_FIELDS = [
   { key: 'title', label: 'Title' },
   { key: 'venue', label: 'Venue' },
   { key: 'type', label: 'Type' },
   { key: 'year', label: 'Year' },
+  { key: 'file', label: 'Certificate Link (Google Drive share link or /path, optional)', type: 'file' },
 ];
 const ACTIVITY_FIELDS = [{ key: 'title', label: 'Activity', type: 'textarea' }];
 
@@ -307,10 +308,11 @@ export default function AdminPanel() {
       );
     }
     if (f.type === 'file') {
+      const cleanUrl = typeof value === 'string' ? value.trim() : (value || '');
       return (
         <div style={{ display: 'flex', gap: '8px' }}>
-          <input type="text" value={value} onChange={onChange} placeholder="Leave empty if not available" />
-          {value && <a href={encodeURI(value)} target="_blank" rel="noopener noreferrer" className="admin-view-link">👁 View</a>}
+          <input type="text" value={value} onChange={onChange} placeholder="Paste Google Drive share link or local /path (optional)" />
+          {cleanUrl && <a href={cleanUrl} target="_blank" rel="noopener noreferrer" className="admin-view-link">👁 View</a>}
         </div>
       );
     }
@@ -723,7 +725,7 @@ export default function AdminPanel() {
         {activeTab === 'associations' && (
           <>
             <h3>🤝 Associations & Memberships</h3>
-            <p>Put association certificates in <code>/public/Associations/</code> and enter the path to make the widget clickable.</p>
+            <p>Manage associations and memberships. You can add a certificate using a <strong>Google Drive share link</strong> (set to "Anyone with the link can view") or a local path in <code>/public/Associations/</code>.</p>
             {renderCategoryEditor('associations', ASSOCIATION_FIELDS, emptyOf(ASSOCIATION_FIELDS), 'Association')}
           </>
         )}
@@ -741,6 +743,7 @@ export default function AdminPanel() {
         {activeTab === 'talks' && (
           <>
             <h3>🎤 Invited Talks & Lectures</h3>
+            <p>Manage sub-categories like FDPs and Technical Expert Talks. You can add a certificate using a <strong>Google Drive share link</strong> (set to "Anyone with the link can view") or a local path.</p>
             {renderCategoryEditor('invitedTalks', TALK_FIELDS, emptyOf(TALK_FIELDS), 'Talk')}
           </>
         )}

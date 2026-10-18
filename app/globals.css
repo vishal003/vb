@@ -760,6 +760,22 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.3px;
 }
 
+.btn-talk-cert:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 168, 69, 0.35);
+}
+
+[data-theme="dark"] .talk-item {
+  background: var(--bg-white) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .btn-talk-cert {
+  background: rgba(212, 168, 69, 0.15) !important;
+}
+
 .file-viewer {
   width: min(1000px, 92vw);
   text-align: center;

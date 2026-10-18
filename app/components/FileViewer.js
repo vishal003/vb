@@ -13,19 +13,26 @@ export default function FileViewer({ file, title, onClose }) {
     };
   }, [onClose]);
 
-  const src = encodeURI(file);
-  const isPdf = /\.pdf$/i.test(file);
+  const cleanFile = typeof file === 'string' ? file.trim() : (file || '');
+  const isDrive = /drive\.google\.com/.test(cleanFile);
+  const driveId = isDrive ? (cleanFile.match(/\/d\/([\w-]+)/)?.[1] || cleanFile.match(/[?&]id=([\w-]+)/)?.[1]) : null;
+  const isPdf = /\.pdf$/i.test(cleanFile);
+
+  const embedSrc = driveId ? `https://drive.google.com/file/d/${driveId}/preview` : encodeURI(cleanFile);
+  const openSrc = driveId ? `https://drive.google.com/file/d/${driveId}/view` : encodeURI(cleanFile);
 
   return (
     <div className="lightbox-overlay" onClick={onClose}>
       <button className="lightbox-btn lightbox-close" onClick={onClose} aria-label="Close">✕</button>
       <div className="file-viewer" onClick={(e) => e.stopPropagation()}>
-        {isPdf
-          ? <iframe src={src} title={title} className="file-viewer-frame" />
-          : <img src={src} alt={title} className="file-viewer-img" />}
+        {isDrive || isPdf ? (
+          <iframe src={embedSrc} title={title} className="file-viewer-frame" allow="autoplay" />
+        ) : (
+          <img src={embedSrc} alt={title} className="file-viewer-img" />
+        )}
         <div className="lightbox-caption">
           {title}
-          <a href={src} target="_blank" rel="noopener noreferrer" className="file-viewer-open">Open in new tab ↗</a>
+          <a href={openSrc} target="_blank" rel="noopener noreferrer" className="file-viewer-open">Open in new tab ↗</a>
         </div>
       </div>
     </div>
