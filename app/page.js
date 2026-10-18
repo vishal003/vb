@@ -35,9 +35,9 @@ const SECTIONS = [
   { id: 'associations', label: 'Associations', icon: Icons.handshake },
   { id: 'activities', label: 'Professional Activities', icon: Icons.briefcase },
   { id: 'invitedTalks', label: 'Invited Talks', icon: Icons.award },
+  { id: 'recentNews', label: 'Recent News', icon: Icons.news },
   { id: 'gallery', label: 'Gallery', icon: Icons.gallery },
   { id: 'contact', label: 'Contact Me', icon: Icons.contact },
-  { id: 'recentNews', label: 'Recent News', icon: Icons.news },
 ];
 
 export default function Home() {
@@ -115,9 +115,9 @@ export default function Home() {
         <div id="associations"><Associations /></div>
         <div id="activities"><ProfessionalActivities /></div>
         <div id="invitedTalks"><InvitedTalks /></div>
+        <div id="recentNews"><RecentNews /></div>
         <div id="gallery"><Gallery /></div>
         <div id="contact"><Contact /></div>
-        <div id="recentNews"><RecentNews /></div>
 
         <footer className="footer">
           <p>© {new Date().getFullYear()} {d.personal.name}. All Rights Reserved.</p>
