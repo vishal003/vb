@@ -18,7 +18,7 @@ function Reveal({ children, delay = 0 }) {
 export default function Gallery() {
   const d = useData();
   const [lightbox, setLightbox] = useState({ open: false, index: 0 });
-  const filtered = d.gallery;
+  const filtered = d.gallery || [];
 
   const openLightbox = (i) => setLightbox({ open: true, index: i });
   const closeLightbox = () => setLightbox({ open: false, index: 0 });

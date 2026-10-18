@@ -8,12 +8,13 @@ import { Icons } from './Icons';
 // Convert a Google Drive share link to a direct download URL
 function resolveDriveDownloadUrl(link) {
   if (!link) return link;
+  const clean = typeof link === 'string' ? link.trim() : link;
   // If it's a drive link, extract the file ID and build a download URL
-  if (/drive\.google\.com/.test(link)) {
-    const id = link.match(/\/d\/([\w-]+)/)?.[1] || link.match(/[?&]id=([\w-]+)/)?.[1];
+  if (/drive\.google\.com/.test(clean)) {
+    const id = clean.match(/\/d\/([\w-]+)/)?.[1] || clean.match(/[?&]id=([\w-]+)/)?.[1];
     if (id) return `https://drive.google.com/uc?export=download&id=${id}`;
   }
-  return link;
+  return clean;
 }
 
 export default function Hero() {

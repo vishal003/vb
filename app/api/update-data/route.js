@@ -13,10 +13,17 @@ export async function POST(request) {
     const FILE_PATH = 'lib/data.json';
     
     if (!GITHUB_TOKEN) {
-      console.warn('GITHUB_TOKEN is missing. Returning success to allow local development.');
-      // If we don't have a token, we just let it pass so local development doesn't break,
-      // but it won't actually trigger a GitHub update.
-      return NextResponse.json({ success: true, message: 'Simulated save.' });
+      // In local development without GITHUB_TOKEN, save directly to lib/data.json file on disk
+      try {
+        const fs = await import('fs/promises');
+        const path = await import('path');
+        const filePath = path.join(process.cwd(), 'lib', 'data.json');
+        await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8');
+        return NextResponse.json({ success: true, message: 'Saved directly to local lib/data.json!' });
+      } catch (fileErr) {
+        console.warn('Could not write to local file, falling back to simulated save:', fileErr);
+        return NextResponse.json({ success: true, message: 'Simulated save.' });
+      }
     }
 
     const githubApiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
