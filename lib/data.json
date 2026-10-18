@@ -7,7 +7,7 @@
     "department": "Department of Information Technology",
     "institution": "A.P. Shah Institute of Technology, Thane",
     "university": "University of Mumbai, Maharashtra, India",
-    "photo": "https://drive.google.com/file/d/15505PV-UcKPWAMjvp7rVAffy8JkUFGia/view?usp=sharing",
+    "photo": "https://drive.google.com/file/d/1l-h8Zy6VWyEYGLd29_NLuqvJHsc2P-QD/view?usp=sharing",
     "email": "vishalbadgujar4@gmail.com",
     "phone": "+91 7709933639",
     "address": "D-204, Mahaveer Nagari-1 CHS, Khadakpada, Kalyan West, Maharashtra, India",
@@ -98,14 +98,14 @@
   ],
   "stats": {
     "publications": 24,
-    "citations": 200,
+    "citations": 210,
     "hIndex": 6,
     "i10Index": 5,
     "yearsExperience": 11,
     "patents": 3,
     "copyrights": 8,
     "books": 2,
-    "conferences": 21
+    "conferences": 22
   },
   "areasOfInterest": [
     "Cyber Security",
@@ -852,7 +852,7 @@
           {
             "id": "cert10",
             "title": "SWAYAM-NPTEL Elite Certifications In Cloud Computing",
-            "details": "",
+            "details": "SWAYAM-NPTEL",
             "certId": "",
             "file": "",
             "category": "Teaching & Academic"
@@ -860,7 +860,7 @@
           {
             "id": "certifications_1790486665874_736bb",
             "title": "SWAYAM-NPTEL Elite Certifications In Big Data Computing",
-            "details": "",
+            "details": "SWAYAM-NPTEL",
             "certId": "",
             "file": "",
             "category": "Teaching & Academic"
@@ -868,7 +868,7 @@
           {
             "id": "certifications_1790486945907_ho2ib",
             "title": "SWAYAM-NPTEL Elite Certifications In Roadmap for Patent Creation",
-            "details": "",
+            "details": "SWAYAM-NPTEL",
             "certId": "",
             "file": "",
             "category": "Teaching & Academic"
@@ -876,7 +876,7 @@
           {
             "id": "certifications_1790486975979_ynwys",
             "title": "SWAYAM-NPTEL Elite Certifications In Foundation of Cloud IoT Edge ML",
-            "details": "",
+            "details": "SWAYAM-NPTEL",
             "certId": "",
             "file": "",
             "category": "Teaching & Academic"
@@ -884,7 +884,7 @@
           {
             "id": "certifications_1790487072402_8g4vw",
             "title": "SWAYAM-NPTEL Elite Certifications In Ethical Hacking",
-            "details": "",
+            "details": "SWAYAM-NPTEL",
             "certId": "",
             "file": "",
             "category": "Teaching & Academic"
@@ -892,7 +892,7 @@
           {
             "id": "certifications_1790487432372_wz10z",
             "title": "SWAYAM-NPTEL Elite Certifications In Accreditation and Outcome Based Learning",
-            "details": "",
+            "details": "SWAYAM-NPTEL",
             "certId": "",
             "file": "",
             "category": "Teaching & Academic"
@@ -1063,6 +1063,13 @@
         "name": "FDPs",
         "items": [
           {
+            "title": "Modern Application Lifecycle: From Architecture to Cloud Deployment",
+            "venue": "APSIT, Thane",
+            "type": "ISTE & IEEE Approved FDP",
+            "year": "2026",
+            "id": "invitedTalks_categories_0_items_1791354077953_c1ifu"
+          },
+          {
             "id": "talk1",
             "title": "Deployment and Workflow Automation",
             "venue": "CRCE Bandra",
@@ -1071,40 +1078,31 @@
         ]
       },
       {
-        "id": "webinars",
-        "name": "Webinars",
+        "id": "technicalLectures",
+        "name": "Technical Expert Talks",
         "items": [
           {
-            "title": "Cloud Security and Career Opportunities in Cloud Computing",
-            "venue": "VIT Pune & CSI Pune Chapter",
-            "year": "Oct 2024",
-            "id": "invitedTalks_webinars_1789144656535_37rif"
-          }
-        ]
-      },
-      {
-        "id": "technicalLectures",
-        "name": "Technical Lectures",
-        "items": [
+            "title": "LaTeX",
+            "venue": "APSIT, Thane",
+            "type": "Expert Talk",
+            "year": "2026",
+            "id": "invitedTalks_categories_1_items_1791354516464_l2fc6"
+          },
           {
             "id": "talk2",
             "title": "Strategic Mapping of Engineering Projects to SDG Using Emerging Approaches",
             "venue": "PVPPCOE, Sion",
-            "type": "Expert Talk"
+            "type": "Expert Talk",
+            "year": "2026"
           },
           {
             "id": "talk3",
             "title": "Cloud Security and Career Opportunities in Cloud Computing",
-            "venue": "VIT Pune & CSI Pune Chapter",
-            "type": "Expert Talk",
+            "venue": "VIT Pune ",
+            "type": "CSI Pune Chapter Approved",
             "year": "Oct 2024"
           }
         ]
-      },
-      {
-        "id": "conferenceInvitedTalks",
-        "name": "Conference Invited Talks",
-        "items": []
       }
     ]
   },
@@ -1181,6 +1179,21 @@
     }
   ],
   "gallery": [
+    {
+      "src": "https://drive.google.com/file/d/1mFB0veJX7sJ5wKgmkNSVbvnm0LzXIYLw/view?usp=sharing",
+      "caption": "cutout",
+      "id": "gallery_1792311378956_jrl5g"
+    },
+    {
+      "src": "https://drive.google.com/file/d/1mFB0veJX7sJ5wKgmkNSVbvnm0LzXIYLw/view?usp=sharing",
+      "caption": "cutout",
+      "id": "gallery_1792311377784_hv6c8"
+    },
+    {
+      "src": "https://drive.google.com/file/d/1np8Ljul2XT2ONRMJpRM_witGu04Ppkdu/view?usp=sharing",
+      "caption": "cutout",
+      "id": "gallery_1792311365734_d1ar3"
+    },
     {
       "id": "gal1",
       "src": "/images/gallery/img1.png",
@@ -1397,7 +1410,7 @@
     },
     {
       "id": "ach2",
-      "value": "200+",
+      "value": "210+",
       "label": "Citations"
     },
     {
@@ -1542,7 +1555,7 @@
     "categories": [
       {
         "id": "journal",
-        "name": "Journal Associations",
+        "name": "Journal Associations (Reviewer)",
         "items": [
           {
             "id": "ja1",
@@ -1620,7 +1633,7 @@
       },
       {
         "id": "conference",
-        "name": "Conference Associations",
+        "name": "Conference Associations (Reviewer)",
         "items": [
           {
             "id": "ca1",
@@ -1686,7 +1699,7 @@
       },
       {
         "id": "memberships",
-        "name": "Memberships",
+        "name": "Professional Memberships",
         "items": [
           {
             "id": "mem1",
