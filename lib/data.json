@@ -1848,5 +1848,12 @@
       "color": "#0077B6"
     }
   ],
-  "recentNews": []
+  "recentNews": [
+    {
+      "title": "xyz",
+      "description": "abc",
+      "image": "https://drive.google.com/file/d/1np8Ljul2XT2ONRMJpRM_witGu04Ppkdu/view?usp=sharing",
+      "id": "recentNews_1792322063996_6t1do"
+    }
+  ]
 }
