@@ -1177,18 +1177,18 @@
   ],
   "gallery": [
     {
-      "src": "/images/gallery/",
-      "caption": "https://drive.google.com/file/d/15NPU63M2L58ydSuAz5F-0mboAJ9j0Wqd/view?usp=sharing",
+      "src": "https://drive.google.com/file/d/15NPU63M2L58ydSuAz5F-0mboAJ9j0Wqd/view?usp=sharing",
+      "caption": "cutout",
       "id": "gallery_1792311378956_jrl5g"
     },
     {
-      "src": "/images/gallery/",
-      "caption": "https://drive.google.com/file/d/1mFB0veJX7sJ5wKgmkNSVbvnm0LzXIYLw/view?usp=sharing",
+      "src": "https://drive.google.com/file/d/1mFB0veJX7sJ5wKgmkNSVbvnm0LzXIYLw/view?usp=sharing",
+      "caption": "cutout",
       "id": "gallery_1792311377784_hv6c8"
     },
     {
       "src": "https://drive.google.com/file/d/1np8Ljul2XT2ONRMJpRM_witGu04Ppkdu/view?usp=sharing",
-      "caption": "",
+      "caption": "cutout",
       "id": "gallery_1792311365734_d1ar3"
     },
     {
