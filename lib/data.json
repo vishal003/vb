@@ -1080,9 +1080,55 @@
   "invitedTalks": {
     "categories": [
       {
-        "id": "fdps",
-        "name": "FDPs",
+        "id": "cat_1795455565004_ug3pe",
+        "name": "Invites / Appreciations",
         "items": [
+          {
+            "title": "Session Chair @ 4th International Conference on Sustainability Innovations in Computing and Engineering (ICSICE-2026)",
+            "venue": "PVPPCOE, SION",
+            "type": "International Conference",
+            "year": "2026",
+            "file": "https://drive.google.com/file/d/1h_ILv8MxVZkjm9NndmTeteLwN6F-mf1f/view?usp=drive_link",
+            "id": "invitedTalks_categories_0_items_1795456346435_ad06v"
+          },
+          {
+            "title": "Session Chair @ GlobalTech Convergence 2026 International Conference",
+            "venue": "Datta Meghe College of Engineering, Airoli",
+            "type": "International Conference",
+            "year": "2026",
+            "file": "https://drive.google.com/file/d/1nj2HL3V4NIOPv8XCypX7S8xFGenl9H8q/view?usp=drive_link",
+            "id": "invitedTalks_categories_0_items_1795456172372_wz98u"
+          },
+          {
+            "title": "Session Chair @ ICETCI 2026 2nd Springer International Conference ",
+            "venue": "Nashik",
+            "type": "Springer International Conference",
+            "year": "2026",
+            "file": "https://drive.google.com/file/d/1G2Uu1DLEanLox1_QHn4E7ThpdPNpWzuw/view?usp=drive_link",
+            "id": "invitedTalks_categories_0_items_1795456001167_11t28"
+          },
+          {
+            "title": "Judge at National Level Event ProtoTech 2026",
+            "venue": "PVPPCOE, Sion",
+            "type": "National Level Event",
+            "year": "2026",
+            "file": "https://drive.google.com/file/d/1K1GAlKYQ-7Qcn_43mv5iLW4xMDVA6Vyg/view?usp=drive_link",
+            "id": "invitedTalks_categories_0_items_1795455859553_4v7gh"
+          }
+        ]
+      },
+      {
+        "id": "fdps",
+        "name": "FDPs / STTPs",
+        "items": [
+          {
+            "title": "National Level STTP on CloudOps Unleashed : Scaling Applications Through DevOps and Cloud",
+            "venue": "Vidyalankar Polytechnic",
+            "type": "ISTE National Level STTP",
+            "year": "2026",
+            "file": "https://drive.google.com/file/d/1-Nx3sfQQ1ZNrZgNS4EhUQCSOI-fi8YAq/view?usp=drive_link",
+            "id": "invitedTalks_categories_0_items_1795454043295_0fafg"
+          },
           {
             "title": "Modern Application Lifecycle: From Architecture to Cloud Deployment",
             "venue": "APSIT, Thane",
@@ -1094,7 +1140,9 @@
             "id": "talk1",
             "title": "Deployment and Workflow Automation",
             "venue": "CRCE Bandra",
-            "type": "ISTE Approved STTP"
+            "type": "ISTE Approved STTP",
+            "file": "https://drive.google.com/file/d/1cTEo0jJ1xSN4eiGTklcBp3wpQ8d8vxD5/view?usp=drive_link",
+            "year": "2026"
           }
         ]
       },
@@ -1114,14 +1162,16 @@
             "title": "Strategic Mapping of Engineering Projects to SDG Using Emerging Approaches",
             "venue": "PVPPCOE, Sion",
             "type": "Expert Talk",
-            "year": "2026"
+            "year": "2026",
+            "file": "https://drive.google.com/file/d/1AZibnPprytwr6EUr1yYS0h6vC4U1BUtW/view?usp=drive_link"
           },
           {
             "id": "talk3",
             "title": "Cloud Security and Career Opportunities in Cloud Computing",
             "venue": "VIT Pune ",
             "type": "CSI Pune Chapter Approved",
-            "year": "Oct 2024"
+            "year": "Oct 2024",
+            "file": "https://drive.google.com/file/d/1OjXGZIq2RKC2wq930telFSjiRmLwYDOZ/view?usp=drive_link"
           }
         ]
       }
