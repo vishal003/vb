@@ -10,7 +10,7 @@
     "photo": "https://drive.google.com/file/d/1l-h8Zy6VWyEYGLd29_NLuqvJHsc2P-QD/view?usp=sharing",
     "email": "vishalbadgujar4@gmail.com",
     "phone": "+91 7709933639",
-    "address": "Mumbai",
+    "address": "D-204, Mahaveer Nagari-1 CHS, Khadakpada, Kalyan West, Maharashtra, India",
     "institutionAddress": "A.P. Shah Institute of Technology, Thane, Mumbai University, India",
     "languages": [
       "English",
@@ -740,6 +740,20 @@
         "name": "Google",
         "items": [
           {
+            "title": "Gemini Certified Faculty",
+            "details": "",
+            "certId": "",
+            "file": "https://drive.google.com/file/d/1jRebI8Gew2f2tzhnvvUM4ft74tl74J-1/view?usp=drive_link",
+            "id": "certifications_categories_3_items_1795451304348_ih90g"
+          },
+          {
+            "title": "Gemini Certified Educator",
+            "details": "",
+            "certId": "",
+            "file": "https://drive.google.com/file/d/1SpfaS44eeyDCnzODkijdUhijBEZS0gzx/view?usp=drive_link",
+            "id": "certifications_categories_3_items_1795451239769_0ns1b"
+          },
+          {
             "id": "cert9",
             "title": "Google Certified Educator Level 1",
             "details": "",
@@ -1415,6 +1429,16 @@
     }
   ],
   "badges": [
+    {
+      "src": "/Badges/Gemini Certified Faculty Badge.png",
+      "title": "",
+      "id": "badges_1795451399292_6zr0k"
+    },
+    {
+      "src": "/Badges/Gemini Certified Educator Badge.png",
+      "title": "",
+      "id": "badges_1795451341089_sxyjz"
+    },
     {
       "id": "badge1",
       "src": "/Badges/1597434413295.jpg",
