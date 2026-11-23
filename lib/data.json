@@ -692,50 +692,6 @@
         ]
       },
       {
-        "id": "oracle",
-        "name": "Oracle",
-        "items": [
-          {
-            "id": "cert2",
-            "title": "Oracle Cloud Infrastructure Architect Associate",
-            "details": "",
-            "certId": "",
-            "file": "/Certifications/Oracle Cloud Infrastructure 2023 Certified Architect Associate.pdf",
-            "category": "Cloud & DevOps"
-          },
-          {
-            "id": "cert3",
-            "title": "Oracle Cloud Infrastructure Foundations",
-            "details": "",
-            "certId": "",
-            "file": "/Certifications/Oracle Cloud Infrastructure 2023 Certified Foundations Associate.pdf",
-            "category": "Cloud & DevOps"
-          }
-        ]
-      },
-      {
-        "id": "microsoft",
-        "name": "Microsoft",
-        "items": [
-          {
-            "id": "cert4",
-            "title": "Microsoft Azure Fundamentals (AZ-900)",
-            "details": "",
-            "certId": "",
-            "file": "/Certifications/Microsoft Certified Cloud Fundamentals.jpg",
-            "category": "Cloud & DevOps"
-          },
-          {
-            "id": "certifications_1790486478835_3leky",
-            "title": "Microsoft Azure AI Fundamentals (AI-900)",
-            "details": "",
-            "certId": "",
-            "file": "/Certifications/Microsoft Certified AI Fundamentals.jpg",
-            "category": "Cloud, AI"
-          }
-        ]
-      },
-      {
         "id": "google",
         "name": "Google",
         "items": [
@@ -768,6 +724,50 @@
             "certId": "",
             "file": "/Certifications/Google Certified Educator Level 2.pdf",
             "category": "Teaching & Academic"
+          }
+        ]
+      },
+      {
+        "id": "microsoft",
+        "name": "Microsoft",
+        "items": [
+          {
+            "id": "cert4",
+            "title": "Microsoft Azure Fundamentals (AZ-900)",
+            "details": "",
+            "certId": "",
+            "file": "/Certifications/Microsoft Certified Cloud Fundamentals.jpg",
+            "category": "Cloud & DevOps"
+          },
+          {
+            "id": "certifications_1790486478835_3leky",
+            "title": "Microsoft Azure AI Fundamentals (AI-900)",
+            "details": "",
+            "certId": "",
+            "file": "/Certifications/Microsoft Certified AI Fundamentals.jpg",
+            "category": "Cloud, AI"
+          }
+        ]
+      },
+      {
+        "id": "oracle",
+        "name": "Oracle",
+        "items": [
+          {
+            "id": "cert2",
+            "title": "Oracle Cloud Infrastructure Architect Associate",
+            "details": "",
+            "certId": "",
+            "file": "/Certifications/Oracle Cloud Infrastructure 2023 Certified Architect Associate.pdf",
+            "category": "Cloud & DevOps"
+          },
+          {
+            "id": "cert3",
+            "title": "Oracle Cloud Infrastructure Foundations",
+            "details": "",
+            "certId": "",
+            "file": "/Certifications/Oracle Cloud Infrastructure 2023 Certified Foundations Associate.pdf",
+            "category": "Cloud & DevOps"
           }
         ]
       },
@@ -855,6 +855,13 @@
         "id": "nptel",
         "name": "NPTEL / IIT",
         "items": [
+          {
+            "title": "SWAYAM-NPTEL Elite Silver Certifications In Cyber Security & Privacy",
+            "details": "SWAYAM-NPTEL",
+            "certId": "",
+            "file": "https://drive.google.com/file/d/1XP9FmX6T2z4UKMSU9q-XujvodK6R8Mj3/view?usp=drive_link",
+            "id": "certifications_categories_8_items_1795451487944_2tdq5"
+          },
           {
             "details": "SWAYAM-NPTEL, IIT Madras",
             "certId": "",
